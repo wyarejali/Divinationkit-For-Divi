@@ -1,0 +1,33 @@
+/* Divi Nations Folder Color */
+.et-db #et-boc .et-l .et-fb-modules-list li.Divi.Nation.Kit.et_pb_folder,
+.et-db #et-boc .et-fb-modules-list li[class^='dina'],
+.et-db #et-boc .et-l .et-fb-modules-list li[class^='dina'] {
+    background: linear-gradient(130deg, #00d4ff, #00809a) !important;
+    color: #fff !important;
+}
+
+.et-db #et-boc .et-l .et-fb-modules-list li.Divi.Nation.Kit.et_pb_folder:hover,
+.et-db #et-boc .et-fb-modules-list li[class^='dina']:hover,
+.et-db #et-boc .et-l .et-fb-modules-list li[class^='dina']:hover {
+    background: linear-gradient(135deg, #00d4ff, #00809a) !important;
+}
+
+.et-db #et-boc .et-fb-modules-list li[class^='dina'] .et-fb-icon,
+.et-db #et-boc .et-l .et-fb-modules-list li[class^='dina'] .et-fb-icon {
+    margin: 0 auto !important;
+}
+
+.et-db #et-boc .et-fb-modules-list li[class^='dina'] svg,
+.et-db #et-boc .et-l .et-fb-modules-list li[class^='dina'] svg {
+    fill: transparent !important;
+}
+
+.et-db
+    #et-boc
+    .et-l
+    .et-fb-modules-list
+    li.Divi.Nation.Kit.et_pb_folder:before {
+    content: url(../../icons/Divinationkit-icon.svg) !important;
+    font-family: none !important;
+    color: #00bae3 !important;
+}

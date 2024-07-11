@@ -1,0 +1,165 @@
+.dina_person-container {
+    position: relative;
+    background: #fff;
+    overflow: hidden;
+}
+
+.dina_person-social-links ul {
+    margin-top: 10px;
+    list-style: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Style two */
+.dina_person-style-two .dina_person-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    backdrop-filter: blur(5px);
+    z-index: 2;
+    transition: all 0.3s ease-in-out;
+}
+
+.dina_person-style-two.dina_person-info-show-on-hover .dina_person-info {
+    bottom: -200px;
+}
+
+.dina_person-info-show-on-hover:hover .dina_person-info {
+    bottom: 0;
+}
+
+/* Style three */
+.dina_person-style-three .dina_person-social-links {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* Social Icon */
+
+.dina_person-social-links {
+    display: flex;
+}
+
+.dina_person-social-network {
+    display: block;
+}
+
+.dina_person-social-network span::before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border-radius: 2px;
+    color: #ffffff;
+}
+
+.dina_person-social-icon-facebook::before {
+    content: '\e093';
+    background-color: #3b5998;
+    font-family: ETmodules;
+}
+
+.dina_person-social-icon-twitter::before {
+    content: '\e094';
+    background-color: #000000;
+    font-family: ETmodules;
+}
+
+.dina_person-social-icon-pinterest::before {
+    content: '\E095';
+    background-color: #cb2027;
+    font-family: ETmodules;
+}
+
+.dina_person-social-icon-instagram::before {
+    content: '\e09a';
+    background-color: #ea2c59;
+    font-family: ETmodules;
+}
+
+.dina_person-social-icon-linkedin::before {
+    content: '\E09D';
+    background-color: #007bb6;
+    font-family: ETmodules;
+}
+
+.dina_person-social-icon-tumblr::before {
+    content: '\E097';
+    background-color: #32506d;
+    font-family: ETmodules;
+}
+
+.dina_person-social-icon-skype::before {
+    content: '\E0A2';
+    background-color: #12a5f4;
+    font-family: ETmodules;
+}
+
+.dina_person-social-icon-vimeo::before {
+    content: '\E09C';
+    background-color: #45bbff;
+    font-family: ETmodules;
+}
+
+.dina_person-social-icon-dribbble::before {
+    content: '\E09B';
+    background-color: #ea4c8d;
+    font-family: ETmodules;
+}
+
+.dina_person-social-icon-behance::before {
+    content: '\F1B4';
+    background-color: #0057ff;
+    font-family: FontAwesome;
+}
+
+.dina_person-social-icon-flickr::before {
+    content: '\E0A6';
+    background-color: #ff0084;
+    font-family: ETmodules;
+}
+
+.dina_person-social-icon-github::before {
+    content: '\F09B';
+    background-color: #333333;
+    font-family: FontAwesome;
+}
+
+.dina_person-social-icon-telegram::before {
+    content: '\F3FE';
+    background-color: #179cde;
+    font-family: FontAwesome;
+}
+
+.dina_person-social-icon-tiktok::before {
+    content: '\E07B';
+    background-color: #fe2c55;
+    font-family: FontAwesome;
+}
+
+.dina_person-social-icon-twitch::before {
+    content: '\F1E8';
+    background-color: #6441a5;
+    font-family: FontAwesome;
+}
+
+.dina_person-social-icon-whatsapp::before {
+    content: '\F232';
+    background-color: #25d366;
+    font-family: FontAwesome;
+}
+
+.dina_person-social-icon-spotify::before {
+    content: '\F1BC';
+    background-color: #1db954;
+    font-family: FontAwesome;
+}

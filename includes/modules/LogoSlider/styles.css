@@ -1,0 +1,84 @@
+.dina_slider_icon {
+    border-width: 0px;
+    cursor: pointer;
+}
+
+.dina_logo_slider_child {
+    margin-bottom: 0 !important;
+}
+
+.dina_logo_slider-img-wrapper {
+    text-align: center;
+}
+
+/* arrows */
+.slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: unset;
+    height: unset;
+    border-radius: 50px;
+}
+
+.dina_slider_icon i.dina_icon {
+    display: block;
+}
+
+.dina_slider_icon:hover {
+    background: #4f60ff;
+}
+
+.dina_logo_slider-container.show-arrow-on-hover .slick-arrow {
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.dina_logo_slider-container.show-arrow-on-hover:hover .slick-arrow {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.dina_logo_slider-container .dina_prev_icon {
+    left: 10px;
+}
+
+.dina_logo_slider-container .dina_next_icon {
+    right: 10px;
+}
+
+/* dots */
+ul.slick-dots {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+    display: flex !important;
+    justify-content: center;
+    gap: 10px;
+    list-style-type: none !important;
+}
+
+ul.slick-dots li button {
+    position: relative;
+    color: transparent;
+    font-size: 0px;
+    line-height: 0;
+    display: block;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    transition: all 0.4s ease;
+}
+
+ul.slick-dots li button::before,
+.dina_slider_icon::before {
+    content: unset !important;
+}

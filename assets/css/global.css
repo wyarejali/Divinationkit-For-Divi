@@ -1,0 +1,99 @@
+body *[class^='dina'] {
+    border-style: solid;
+}
+
+/* Default css */
+.dina_icon {
+    position: relative;
+    font-style: normal !important;
+    line-height: 1;
+    font-family: ETmodules;
+    speak: none;
+    font-weight: 400;
+    -webkit-font-feature-settings: normal;
+    font-feature-settings: normal;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    font-size: 35px;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    direction: ltr;
+    font-style: normal !important;
+}
+
+.dina_btn {
+    display: inline-block;
+}
+
+.dina_flip_card-container,
+.dina_icon,
+.dina_divider_icon,
+.dina_divider-title,
+.dina_image_magnifier-image,
+.dina_image_magnifier-lens-dev,
+.dina_image_magnifier-lens,
+.dina_pricelist-item-wrapper,
+.dina_pricelist-image,
+.dina_pricelist_item,
+.dian_slider_icon,
+.dina_icon_list_item {
+    border-style: solid;
+}
+
+/* Rating Stars */
+.dina_rating-star-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.dina_rating-star {
+    position: relative;
+    font-style: normal;
+    display: inline-block;
+    line-height: 1;
+}
+
+.dina_rating-star::before {
+    content: '★';
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.dina_rating-star-1::before {
+    width: 10%;
+}
+.dina_rating-star-2::before {
+    width: 20%;
+}
+.dina_rating-star-3::before {
+    width: 30%;
+}
+.dina_rating-star-4::before {
+    width: 40%;
+}
+.dina_rating-star-5::before {
+    width: 50%;
+}
+.dina_rating-star-6::before {
+    width: 60%;
+}
+.dina_rating-star-7::before {
+    width: 70%;
+}
+.dina_rating-star-8::before {
+    width: 80%;
+}
+.dina_rating-star-9::before {
+    width: 90%;
+}
+.dina_rating-star-10::before {
+    width: 100%;
+}

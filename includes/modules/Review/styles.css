@@ -1,0 +1,72 @@
+.dina_review_box-style-one .dina_review_box-author,
+.dina_review_box-style-two .dina_review_box-author,
+.dina_review_box-style-three,
+.dina_review_box-img-wrapper,
+.dina_review_box-content-wrapper {
+    display: flex;
+}
+
+.dina_review_box-style-three .dina_review_box-img {
+    flex: 1;
+}
+
+.dina_review_box-style-three .dina_review_box-content-wrapper {
+    flex: 1.5;
+}
+
+.dina_review_box-content-wrapper {
+    flex-direction: column;
+}
+
+.dina_review_box-style-one .dina_review_box-img {
+    width: 20%;
+    overflow: hidden;
+}
+
+.dina_review_box-style-one .dina_review_box-description {
+    margin-top: 14px;
+}
+
+.dina_review_box-style-two .dina_review_box-description {
+    margin-bottom: 14px;
+}
+
+.dina_review_box-style-three .dina_review_box-description {
+    margin-top: 14px;
+}
+
+.dina_review_box-style-four .dina_review_box-description {
+    margin: 14px 0;
+}
+
+.dina_review_box-img img {
+    display: block;
+}
+
+.dina_review_box-name {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.dina_review_box-position {
+    font-size: 16px;
+    padding-bottom: 0;
+}
+
+.dina_review_box-rating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dina_review_box-stars {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.dina_review_box-star-filled {
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}

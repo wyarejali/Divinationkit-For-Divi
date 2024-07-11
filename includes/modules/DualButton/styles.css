@@ -1,0 +1,16 @@
+.dina_dual_button-container,
+.dina_dual_button-one-wrapper,
+.dina_dual_button-two-wrapper {
+    display: flex;
+}
+
+.dina_dual_button-separator-icon,
+.dina_dual_button-separator-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.et_pb_button[data-icon]:not([data-icon='']):after {
+    content: attr(data-icon);
+}
