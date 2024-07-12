@@ -1,8 +1,11 @@
 <?php
 
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
 
-function dina_global_assets_list($global_list)
-{
+function dina_global_assets_list($global_list) {
 
     $assets_list   = array();
     $assets_prefix = et_get_dynamic_assets_path();
@@ -14,8 +17,7 @@ function dina_global_assets_list($global_list)
     return array_merge($global_list, $assets_list);
 }
 
-function dina_inject_fa_icons($icon_data)
-{
+function dina_inject_fa_icons($icon_data) {
     if (function_exists('et_pb_maybe_fa_font_icon') && et_pb_maybe_fa_font_icon($icon_data)) {
         add_filter('et_global_assets_list', 'dina_global_assets_list');
         add_filter('et_late_global_assets_list', 'dina_global_assets_list');

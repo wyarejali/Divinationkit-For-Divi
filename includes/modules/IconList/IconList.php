@@ -124,7 +124,7 @@ class DINA_Icon_List extends DINA_Module_Core {
             ),
 
             'icon_padding'       => array(
-                'label'          => esc_html__( 'Image/Icon Padding', 'divinationkit-for-divi' ),
+                'label'          => esc_html__( 'Icon Padding', 'divinationkit-for-divi' ),
                 'description'    => esc_html__( 'Define custom padding for icon', 'divinationkit-for-divi' ),
                 'type'           => 'custom_padding',
                 'tab_slug'       => 'advanced',
@@ -134,7 +134,7 @@ class DINA_Icon_List extends DINA_Module_Core {
             ),
 
             'icon_margin'        => array(
-                'label'          => esc_html__( 'Image/Icon Margin', 'divinationkit-for-divi' ),
+                'label'          => esc_html__( 'Icon Margin', 'divinationkit-for-divi' ),
                 'description'    => esc_html__( 'Define custom margin for icon', 'divinationkit-for-divi' ),
                 'type'           => 'custom_margin',
                 'tab_slug'       => 'advanced',

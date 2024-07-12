@@ -14,8 +14,6 @@ export class DualButton extends Component {
         const additionalCss = [];
         let iconStyle = [];
 
-        console.log(props);
-
         // Render icon style
         iconStyle = renderIconStyle(
             props,

@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: DiviNationKit for Divi
-Plugin URI:  https://divinationkit.unique-ui.com
+Plugin URI:  https://divinationkit.com
 Description: Divinationkit is a Powerful Divi module extension to enhance your Divi website to the next level.
-Version:     1.0.0
+Version:     1.0.2
 Author:      Unique UI
-Author URI:  https://unique-ui.com
+Author URI:  https://divinationkit.com
 License:     GPL2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: divinationkit-for-divi
@@ -36,26 +36,26 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 if( ! class_exists( 'DINA_DIVINATIONKIT' ) ) :
 
-	final class DINA_DIVINATIONKIT {
+	final class DINA_Divinationkit_plugin {
 
 		/**
 		 * Website url
 		 */
-		const website_url = 'https://divi-nations.unique-ui.com/';
+		const website_url = 'https://divinationkit.com';
 
 		/**
 		 * Plugin version
 		 *
 		 * @var string
 		 */
-		const version = '1.0.0';
+		const version = '1.0.2';
 
 		/**
 		 * Plugin documentation
 		 * 
 		 * @var string
 		 */
-		const DOCUMENTATION_LINK = 'https://divi-nations.unique-ui.com/docs';
+		const DOCUMENTATION_LINK = 'https://divinationkit.com/docs';
 
 		/**
 		 * Plugin only instance
@@ -78,7 +78,7 @@ if( ! class_exists( 'DINA_DIVINATIONKIT' ) ) :
 		/**
 		 * Initializes a singleton instance
 		 *
-		 * @return \DINA_DIVINATIONKIT
+		 * @return \DINA_Divinationkit_plugin
 		 */
 		public static function init() {
 	
@@ -106,7 +106,7 @@ if( ! class_exists( 'DINA_DIVINATIONKIT' ) ) :
 			define( 'DINA_DIVINATIONKIT_BASE', plugin_basename(__FILE__) );
 
 			define( 'DINA_DIVINATIONKIT_WEBSITE', self::website_url );
-			define( 'DINA_DIVINATIONKIT_AUTHOR', 'Unique UI' );
+			define( 'DINA_DIVINATIONKIT_AUTHOR', 'Divinationkit' );
 
 		}
 	
@@ -128,7 +128,7 @@ if( ! class_exists( 'DINA_DIVINATIONKIT' ) ) :
 		 * Initialize divi modules
 		 */
 		public function dne_extension_initialize() {			
-			require_once DINA_DIVINATIONKIT_DIR . 'includes/DiviBuilderX.php';
+			require_once DINA_DIVINATIONKIT_DIR . 'includes/Divinationkit.php';
 		}
 	
 		/**
@@ -176,7 +176,7 @@ endif;
  * @return void
  */
 function dina_divinationkit_plugin() {
-	return DINA_DIVINATIONKIT::init();
+	return DINA_Divinationkit_plugin::init();
 }
 
 // Kick-off the plugin

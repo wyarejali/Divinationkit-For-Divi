@@ -3,7 +3,7 @@
 class DINA_Person extends DINA_Module_Core {
 
     protected $module_credits = array(
-        'module_uri' => DINA_DIVINATIONKIT_WEBSITE . '/moduless/person/',
+        'module_uri' => DINA_DIVINATIONKIT_WEBSITE . '/modules/person/',
         'author'     => DINA_DIVINATIONKIT_AUTHOR,
         'author_uri' => DINA_DIVINATIONKIT_WEBSITE,
     );

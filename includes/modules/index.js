@@ -8,7 +8,6 @@ import LogoSlider from './LogoSlider/LogoSlider';
 import LogoSliderChild from './LogoSliderChild/LogoSliderChild';
 import Person from './Person/Person';
 import PersonChild from './PersonChild/PersonChild';
-import Posts from './Posts/Posts';
 import PriceList from './PriceList/PriceList';
 import PriceListChild from './PriceListChild/PriceListChild';
 import Rating from './Rating/Rating';
@@ -29,5 +28,4 @@ export default [
     DualButton,
     Person,
     PersonChild,
-    Posts,
 ];

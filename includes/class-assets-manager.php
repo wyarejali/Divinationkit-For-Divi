@@ -1,7 +1,12 @@
 <?php
 
+
 namespace DINA_DIVINATIONKIT;
 
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
 /**
  * Assets handlers class
  */
