@@ -30,14 +30,6 @@ export const conditionalResponsiveCSS = (property, cssValue, important) => {
     }
 };
 
-export const checkHoverEnable = (props, optionName) => {
-    let isHover = props[optionName + '__hover_enabled']
-        ? props[optionName + '__hover_enabled'].split('|')
-        : [];
-
-    console.log(isHover[0]);
-};
-
 /**
  *
  */
@@ -126,7 +118,6 @@ export const setResponsiveCSS = (props, styles = []) => {
 
     // Finally Return the css
     return additionalCss;
-    // console.log(styles);
 };
 
 export const renderIconStyle = (props, option_name, selector) => {

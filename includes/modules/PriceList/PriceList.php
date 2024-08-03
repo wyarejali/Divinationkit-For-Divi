@@ -3,7 +3,7 @@
 class DINA_PriceList extends DINA_Module_Core {
 
     protected $module_credits = array(
-        'module_uri' => DINA_DIVINATIONKIT_WEBSITE . 'modules/image-accordion/',
+        'module_uri' => DINA_DIVINATIONKIT_WEBSITE . 'modules/price-list/',
         'author'     => DINA_DIVINATIONKIT_AUTHOR,
         'author_uri' => DINA_DIVINATIONKIT_WEBSITE,
     );

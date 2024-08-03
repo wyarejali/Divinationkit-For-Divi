@@ -1,0 +1,423 @@
+/* Border Hover Effects */
+
+.dina-ripple-in,
+.dina-ripple-out,
+.dina-outline-in,
+.dina-outline-out {
+    overflow: visible !important;
+}
+
+/* Ripple Out */
+@-webkit-keyframes dina-ripple-out {
+    100% {
+        top: -12px;
+        right: -12px;
+        bottom: -12px;
+        left: -12px;
+        opacity: 0;
+    }
+}
+@keyframes dina-ripple-out {
+    100% {
+        top: -12px;
+        right: -12px;
+        bottom: -12px;
+        left: -12px;
+        opacity: 0;
+    }
+}
+
+.dina-ripple-out {
+    position: relative;
+    transform: perspective(1px) translateZ(0);
+}
+
+.dina-ripple-out:before {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.dina-ripple-out:hover:before,
+.dina-ripple-out:focus:before,
+.dina-ripple-out:active:before {
+    -webkit-animation-name: dina-ripple-out;
+    animation-name: dina-ripple-out;
+}
+
+/* Ripple In */
+
+@-webkit-keyframes dina-ripple-in {
+    100% {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes dina-ripple-in {
+    100% {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 1;
+    }
+}
+.dina-ripple-in {
+    position: relative;
+    transform: perspective(1px) translateZ(0);
+}
+.dina-ripple-in:before {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    top: -12px;
+    right: -12px;
+    bottom: -12px;
+    left: -12px;
+    opacity: 0;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+.dina-ripple-in:hover:before,
+.dina-ripple-in:focus:before,
+.dina-ripple-in:active:before {
+    -webkit-animation-name: dina-ripple-in;
+    animation-name: dina-ripple-in;
+}
+
+/* Outline In */
+.dina-outline-in {
+    position: relative;
+    transform: perspective(1px) translateZ(0);
+}
+.dina-outline-in:before {
+    pointer-events: none;
+    content: '';
+    position: absolute;
+    border-style: solid;
+    top: -16px;
+    right: -16px;
+    bottom: -16px;
+    left: -16px;
+    opacity: 0;
+    -webkit-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: top, right, bottom, left;
+    -o-transition-property: top, right, bottom, left;
+    transition-property: top, right, bottom, left;
+}
+.dina-outline-in:hover:before,
+.dina-outline-in:focus:before,
+.dina-outline-in:active:before {
+    top: -8px;
+    right: -8px;
+    bottom: -8px;
+    left: -8px;
+    opacity: 1;
+}
+
+/* Outline Out */
+.dina-outline-out {
+    position: relative;
+    transform: perspective(1px) translateZ(0);
+}
+.dina-outline-out:before {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: top, right, bottom, left;
+    -o-transition-property: top, right, bottom, left;
+    transition-property: top, right, bottom, left;
+}
+.dina-outline-out:hover:before,
+.dina-outline-out:focus:before,
+.dina-outline-out:active:before {
+    top: -8px;
+    right: -8px;
+    bottom: -8px;
+    left: -8px;
+}
+
+/* Underline From Left */
+.dina-underline-from-left {
+    position: relative;
+    overflow: hidden;
+    transform: perspective(1px) translateZ(0);
+}
+.dina-underline-from-left:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    background: #2098d1;
+    height: 4px;
+    -webkit-transition-property: right;
+    -o-transition-property: right;
+    transition-property: right;
+    -webkit-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    -o-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+.dina-underline-from-left:hover:before,
+.dina-underline-from-left:focus:before,
+.dina-underline-from-left:active:before {
+    right: 0;
+}
+
+/* Underline From Center */
+.dina-underline-from-center {
+    position: relative;
+    overflow: hidden;
+    transform: perspective(1px) translateZ(0);
+}
+.dina-underline-from-center:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 51%;
+    right: 51%;
+    bottom: 0;
+    background: #2098d1;
+    height: 4px;
+    -webkit-transition-property: left, right;
+    -o-transition-property: left, right;
+    transition-property: left, right;
+    -webkit-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    -o-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+.dina-underline-from-center:hover:before,
+.dina-underline-from-center:focus:before,
+.dina-underline-from-center:active:before {
+    left: 0;
+    right: 0;
+}
+
+/* Underline From Right */
+.dina-underline-from-right {
+    position: relative;
+    overflow: hidden;
+    transform: perspective(1px) translateZ(0);
+}
+.dina-underline-from-right:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 100%;
+    right: 0;
+    bottom: 0;
+    background: #2098d1;
+    height: 4px;
+    -webkit-transition-property: left;
+    -o-transition-property: left;
+    transition-property: left;
+    -webkit-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    -o-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+.dina-underline-from-right:hover:before,
+.dina-underline-from-right:focus:before,
+.dina-underline-from-right:active:before {
+    left: 0;
+}
+
+/* Overline From Left */
+.dina-overline-from-left {
+    position: relative;
+    overflow: hidden;
+    transform: perspective(1px) translateZ(0);
+}
+.dina-overline-from-left:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 100%;
+    top: 0;
+    background: #2098d1;
+    height: 4px;
+    -webkit-transition-property: right;
+    -o-transition-property: right;
+    transition-property: right;
+    -webkit-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    -o-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+.dina-overline-from-left:hover:before,
+.dina-overline-from-left:focus:before,
+.dina-overline-from-left:active:before {
+    right: 0;
+}
+
+/* Overline From Center */
+.dina-overline-from-center {
+    position: relative;
+    overflow: hidden;
+    transform: perspective(1px) translateZ(0);
+}
+.dina-overline-from-center:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 51%;
+    right: 51%;
+    top: 0;
+    background: #2098d1;
+    height: 4px;
+    -webkit-transition-property: left, right;
+    -o-transition-property: left, right;
+    transition-property: left, right;
+    -webkit-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    -o-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+.dina-overline-from-center:hover:before,
+.dina-overline-from-center:focus:before,
+.dina-overline-from-center:active:before {
+    left: 0;
+    right: 0;
+}
+
+/* Overline From Right */
+.dina-overline-from-right {
+    position: relative;
+    overflow: hidden;
+    transform: perspective(1px) translateZ(0);
+}
+.dina-overline-from-right:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 100%;
+    right: 0;
+    top: 0;
+    background: #2098d1;
+    height: 4px;
+    -webkit-transition-property: left;
+    -o-transition-property: left;
+    transition-property: left;
+    -webkit-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    -o-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+.dina-overline-from-right:hover:before,
+.dina-overline-from-right:focus:before,
+.dina-overline-from-right:active:before {
+    left: 0;
+}
+
+/* Underline Reveal */
+.dina-underline-reveal {
+    position: relative;
+    overflow: hidden;
+    transform: perspective(1px) translateZ(0);
+}
+.dina-underline-reveal:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #2098d1;
+    height: 4px;
+    -webkit-transform: translateY(4px);
+    -ms-transform: translateY(4px);
+    transform: translateY(4px);
+    -webkit-transition-property: transform;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    -o-transition-property: transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+    -webkit-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    -o-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+.dina-underline-reveal:hover:before,
+.dina-underline-reveal:focus:before,
+.dina-underline-reveal:active:before {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+}
+
+/* Overline Reveal */
+.dina-overline-reveal {
+    position: relative;
+    overflow: hidden;
+    transform: perspective(1px) translateZ(0);
+}
+.dina-overline-reveal:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    top: 0;
+    background: #2098d1;
+    height: 4px;
+    -webkit-transform: translateY(-4px);
+    -ms-transform: translateY(-4px);
+    transform: translateY(-4px);
+    -webkit-transition-property: transform;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    -o-transition-property: transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+    -webkit-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    -o-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+.dina-overline-reveal:hover:before,
+.dina-overline-reveal:focus:before,
+.dina-overline-reveal:active:before {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+}

@@ -27,19 +27,19 @@ class Flip_Card extends Component {
             '%%order_class%% .dina_flip_card-back-icon i.dina_icon'
         );
 
-        // Ganaral styles
+        // General styles
         additionalCss.push([
             {
                 selector: `%%order_class%% .dina_flip_card-front`,
                 declaration: `
-                    align-items: ${props.front_vartical_align};
+                    align-items: ${props.front_vertical_align};
                     text-align: ${props.front_text_align};
                 `,
             },
             {
                 selector: `%%order_class%% .dina_flip_card-back`,
                 declaration: `
-                    align-items: ${props.back_vartical_align};
+                    align-items: ${props.back_vertical_align};
                     text-align: ${props.back_text_align};
                 `,
             },
@@ -406,7 +406,7 @@ class Flip_Card extends Component {
                     ? props.button_link
                     : '';
 
-            const buttonicon =
+            const buttonIcon =
                 typeof props.button_icon !== 'undefined'
                     ? utils.processFontIcon(props.button_icon)
                     : '6';
@@ -430,7 +430,7 @@ class Flip_Card extends Component {
                         )} dina_flip_card-btn`}
                         href={buttonUrl}
                         target={target}
-                        data-icon={buttonicon}
+                        data-icon={buttonIcon}
                     >
                         {props.dynamic.button_text.render()}
                     </a>
