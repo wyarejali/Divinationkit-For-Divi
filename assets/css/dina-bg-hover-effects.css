@@ -12,7 +12,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: #2064d1;
+    background: #e02b20;
     transform: scaleX(0);
     transform-origin: 0 50%;
     transition-property: transform;
@@ -35,7 +35,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: #2064d1;
+    background: #e02b20;
     transform: scaleX(0);
     transform-origin: 100% 50%;
     transition-property: transform;
@@ -58,7 +58,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: #2064d1;
+    background: #e02b20;
     transform: scaleY(0);
     transform-origin: 50% 0;
     transition-property: transform;
@@ -86,18 +86,14 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: #2064d1;
+    background: #e02b20;
     transform: scaleY(0);
     transform-origin: 50% 100%;
     transition-property: transform;
     transition-duration: 0.3s;
     transition-timing-function: ease-out;
 }
-.dina-swipe-to-top:hover,
-.dina-swipe-to-top:focus,
-.dina-swipe-to-top:active {
-    color: white;
-}
+
 .dina-swipe-to-top:hover:before,
 .dina-swipe-to-top:focus:before,
 .dina-swipe-to-top:active:before {
@@ -118,21 +114,17 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: #2064d1;
+    background: #e02b20;
     transform: scaleX(0);
     transform-origin: 0 50%;
     transition-property: transform;
     transition-duration: 0.5s;
     transition-timing-function: ease-out;
 }
-.dina-bounce-to-right:hover,
-.dina-bounce-to-right:focus,
-.dina-bounce-to-right:active {
-    color: white;
-}
+
 .dina-bounce-to-right:hover:before,
 .dina-bounce-to-right:focus:before,
-.dina-bounce-to-right:active:befor {
+.dina-bounce-to-right:active:before {
     transform: scaleX(1);
     transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
 }
@@ -151,18 +143,14 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: #2064d1;
+    background: #e02b20;
     transform: scaleX(0);
     transform-origin: 100% 50%;
     transition-property: transform;
     transition-duration: 0.5s;
     transition-timing-function: ease-out;
 }
-.dina-bounce-to-left:hover,
-.dina-bounce-to-left:focus,
-.dina-bounce-to-left:active {
-    color: white;
-}
+
 .dina-bounce-to-left:hover:before,
 .dina-bounce-to-left:focus:before,
 .dina-bounce-to-left:active:before {
@@ -184,18 +172,14 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: #2064d1;
+    background: #e02b20;
     transform: scaleY(0);
     transform-origin: 50% 0;
     transition-property: transform;
     transition-duration: 0.5s;
     transition-timing-function: ease-out;
 }
-.dina-bounce-to-bottom:hover,
-.dina-bounce-to-bottom:focus,
-.dina-bounce-to-bottom:active {
-    color: white;
-}
+
 .dina-bounce-to-bottom:hover:before,
 .dina-bounce-to-bottom:focus:before,
 .dina-bounce-to-bottom:active:before {
@@ -217,18 +201,14 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: #2064d1;
+    background: #e02b20;
     transform: scaleY(0);
     transform-origin: 50% 100%;
     transition-property: transform;
     transition-duration: 0.5s;
     transition-timing-function: ease-out;
 }
-.dina-bounce-to-top:hover,
-.dina-bounce-to-top:focus,
-.dina-bounce-to-top:active {
-    color: white;
-}
+
 .dina-bounce-to-top:hover:before,
 .dina-bounce-to-top:focus:before,
 .dina-bounce-to-top:active:before {
@@ -238,11 +218,8 @@
 
 /* Radial Out */
 .dina-radial-out {
-    position: relative;
-    overflow: hidden;
-    background: #e1e1e1;
-    transition-property: color;
     transition-duration: 0.3s;
+    overflow: hidden;
 }
 .dina-radial-out:before {
     content: '';
@@ -252,18 +229,14 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: #2064d1;
+    background: #e02b20;
     border-radius: 100%;
     transform: scale(0);
     transition-property: transform;
     transition-duration: 0.3s;
     transition-timing-function: ease-out;
 }
-.dina-radial-out:hover,
-.dina-radial-out:focus,
-.dina-radial-out:active {
-    color: white;
-}
+
 .dina-radial-out:hover:before,
 .dina-radial-out:focus:before,
 .dina-radial-out:active:before {
@@ -272,11 +245,8 @@
 
 /* Radial In */
 .dina-radial-in {
-    position: relative;
-    overflow: hidden;
-    background: #2064d1;
-    transition-property: color;
     transition-duration: 0.3s;
+    overflow: hidden;
 }
 .dina-radial-in:before {
     content: '';
@@ -293,11 +263,7 @@
     transition-duration: 0.3s;
     transition-timing-function: ease-out;
 }
-.dina-radial-in:hover,
-.dina-radial-in:focus,
-.dina-radial-in:active {
-    color: white;
-}
+
 .dina-radial-in:hover:before,
 .dina-radial-in:focus:before,
 .dina-radial-in:active:before {
@@ -306,9 +272,6 @@
 
 /* Rectangle In */
 .dina-rectangle-in {
-    position: relative;
-    background: #2064d1;
-    transition-property: color;
     transition-duration: 0.3s;
 }
 .dina-rectangle-in:before {
@@ -319,17 +282,13 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: #e1e1e1;
+    background: #e02b20;
     transform: scale(1);
     transition-property: transform;
     transition-duration: 0.3s;
     transition-timing-function: ease-out;
 }
-.dina-rectangle-in:hover,
-.dina-rectangle-in:focus,
-.dina-rectangle-in:active {
-    color: white;
-}
+
 .dina-rectangle-in:hover:before,
 .dina-rectangle-in:focus:before,
 .dina-rectangle-in:active:before {
@@ -338,9 +297,6 @@
 
 /* Rectangle Out */
 .dina-rectangle-out {
-    position: relative;
-    background: #e1e1e1;
-    transition-property: color;
     transition-duration: 0.3s;
 }
 .dina-rectangle-out:before {
@@ -351,17 +307,13 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: #2064d1;
+    background: #e02b20;
     transform: scale(0);
     transition-property: transform;
     transition-duration: 0.3s;
     transition-timing-function: ease-out;
 }
-.dina-rectangle-out:hover,
-.dina-rectangle-out:focus,
-.dina-rectangle-out:active {
-    color: white;
-}
+
 .dina-rectangle-out:hover:before,
 .dina-rectangle-out:focus:before,
 .dina-rectangle-out:active:before {
@@ -371,9 +323,6 @@
 
 /* Shutter In Horizontal */
 .dina-shutter-in-horizontal {
-    position: relative;
-    background: #2064d1;
-    transition-property: color;
     transition-duration: 0.3s;
 }
 .dina-shutter-in-horizontal:before {
@@ -384,18 +333,14 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: #e1e1e1;
+    background: #e02b20;
     transform: scaleX(1);
     transform-origin: 50%;
     transition-property: transform;
     transition-duration: 0.3s;
     transition-timing-function: ease-out;
 }
-.dina-shutter-in-horizontal:hover,
-.dina-shutter-in-horizontal:focus,
-.dina-shutter-in-horizontal:active {
-    color: white;
-}
+
 .dina-shutter-in-horizontal:hover:before,
 .dina-shutter-in-horizontal:focus:before,
 .dina-shutter-in-horizontal:active:before {
@@ -405,9 +350,6 @@
 
 /* Shutter Out Horizontal */
 .dina-shutter-out-horizontal {
-    position: relative;
-    background: #e1e1e1;
-    transition-property: color;
     transition-duration: 0.3s;
 }
 .dina-shutter-out-horizontal:before {
@@ -418,18 +360,14 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: #2064d1;
+    background: #e02b20;
     transform: scaleX(0);
     transform-origin: 50%;
     transition-property: transform;
     transition-duration: 0.3s;
     transition-timing-function: ease-out;
 }
-.dina-shutter-out-horizontal:hover,
-.dina-shutter-out-horizontal:focus,
-.dina-shutter-out-horizontal:active {
-    color: white;
-}
+
 .dina-shutter-out-horizontal:hover:before,
 .dina-shutter-out-horizontal:focus:before,
 .dina-shutter-out-horizontal:active::before {
@@ -438,9 +376,6 @@
 
 /* Shutter In Vertical */
 .dina-shutter-in-vertical {
-    position: relative;
-    background: #2064d1;
-    transition-property: color;
     transition-duration: 0.3s;
 }
 .dina-shutter-in-vertical:before {
@@ -451,18 +386,14 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: #e1e1e1;
+    background: #e02b20;
     transform: scaleY(1);
     transform-origin: 50%;
     transition-property: transform;
     transition-duration: 0.3s;
     transition-timing-function: ease-out;
 }
-.dina-shutter-in-vertical:hover,
-.dina-shutter-in-vertical:focus,
-.dina-shutter-in-vertical:active {
-    color: white;
-}
+
 .dina-shutter-in-vertical:hover:before,
 .dina-shutter-in-vertical:focus:before,
 .dina-shutter-in-vertical:active:before {
@@ -471,9 +402,6 @@
 
 /* Shutter Out Vertical */
 .dina-shutter-out-vertical {
-    position: relative;
-    background: #e1e1e1;
-    transition-property: color;
     transition-duration: 0.3s;
 }
 .dina-shutter-out-vertical:before {
@@ -484,18 +412,14 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: #2064d1;
+    background: #e02b20;
     transform: scaleY(0);
     transform-origin: 50%;
     transition-property: transform;
     transition-duration: 0.3s;
     transition-timing-function: ease-out;
 }
-.dina-shutter-out-vertical:hover,
-.dina-shutter-out-vertical:focus,
-.dina-shutter-out-vertical:active {
-    color: white;
-}
+
 .dina-shutter-out-vertical:hover:before,
 .dina-shutter-out-vertical:focus:before,
 .dina-shutter-out-vertical:active:before {

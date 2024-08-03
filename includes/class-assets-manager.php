@@ -88,6 +88,11 @@ class DINA_Assets {
                 'version' => DINA_DIVINATIONKIT_VERSION,
                 'enqueue' => false,
             ),
+            'dina-bg-hover-effects'     => array(
+                'src'     => DINA_DIVINATIONKIT_URL . '/assets/css/dina-bg-hover-effects.css',
+                'version' => DINA_DIVINATIONKIT_VERSION,
+                'enqueue' => false,
+            ),
 
             // Slick
             'dina-slick'                => array(

@@ -8,6 +8,7 @@ import {
 
 import '../../../assets/css/dina-2d-hover-effects.css';
 import '../../../assets/css/dina-border-hover-effects.css';
+import '../../../assets/css/dina-bg-hover-effects.css';
 import './styles.css';
 
 export class DualButton extends Component {

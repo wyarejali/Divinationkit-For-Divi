@@ -14,7 +14,7 @@ Powerful Divi modules to make your website more creative and professional
 == Description ==
 Introducing "Divi Nation Kit," a powerful WordPress plugin designed to elevate your Divi theme experience by offering a plethora of functional and creative Divi modules. Perfect for designers, developers, and website owners, Divi Nation Kit empowers you to build stunning, highly customizable websites with ease.
 
-<a href="https://divinationkit.com/modules" target="_blank">Prevew Demos</a>
+<a href="https://divinationkit.com/modules" target="_blank">Preview Demos</a>
 
 Our plugin seamlessly integrates with the Divi Builder, providing a rich library of unique modules that enhance your site’s functionality and aesthetics. Whether you need advanced sliders, interactive galleries, dynamic content displays, or specialized forms, Divi Nation Kit has got you covered. Each module is meticulously crafted to ensure responsiveness, fast loading times, and intuitive customization options.
 
@@ -24,7 +24,7 @@ Transform your website-building experience with Divi Nation Kit and unlock the f
 
 ## Divi Nation Kit Lite contains 10 free custom modules and more to coming soon. ##
 
-- <a href="https://divinationkit.com/modules/advanced-divider" target="_blank">Advanced Divider</a> - To seperate two section. Your will find 2 types of divider. 1. Divider with icon 2. Divider with text. And you will full control to customize those dividers.
+- <a href="https://divinationkit.com/modules/advanced-divider" target="_blank">Advanced Divider</a> - To separate two section. Your will find 2 types of divider. 1. Divider with icon 2. Divider with text. And you will full control to customize those dividers.
 - <a href="https://divinationkit.com/modules/flipcard" target="_blank">Flip Card</a> with 4 types of flip card effect to choose from (Flip Left, Flip Right, Flip Up and Flip Down), you can create stunning interactive content that converts.
 - <a href="https://divinationkit.com/modules/icon-box" target="_blank">Icon Box</a> - Can help you to define features with each item highlighted by it’s own icon.
 - <a href="https://divinationkit.com/modules/icon-list" target="_blank">Icon List</a> - Create an easy-to-manage list of items, with each item highlighted by it’s own icon.
@@ -37,8 +37,8 @@ Transform your website-building experience with Divi Nation Kit and unlock the f
 
 ## Upcoming features and modules
 <strong>Features</strong>
-- Dashboard: you can controll upcoming features and modules
-- Collaps submenu on mobile
+- Dashboard: you can control upcoming features and modules
+- Collapse submenu on mobile
 - Allow upload svg, TTF, OTF and WOFF font files
 - Allow Preloader
 - and many more
@@ -114,19 +114,18 @@ Yes! DiviNationKit is absolutely free. There is no hidden charge.
 
 = Version 1.0.3 - date =
 Added New Modules, features and fixed issues
-- [Compatibility]: 
 - Added: Skill Progress Bar
 - Added: Business Hour
 - Added: Gradient Heading
-- Added: Testimonial Slider
-- Added: FAQ - Accordion
-- Fixed: Update Dual Button module to customize in a organized way + auto 2 line
 - Fixed: Price list update
 - Fixed: flip card box shadow
 - Fixed: Logo slider RTL mode not working in live 
 - Feature: Text area added for Rating module.
 - Feature: Tooltip on icon list module and fixed border issue.
 - Feature: Added badge on icon box module.
+- Added: Testimonial Slider
+- Added: FAQ - Accordion
+- Fixed: Update Dual Button module to customize in a organized way + auto 2 line
 
 = Version 1.0.2 - 12.07.2024 =
 * Fixed previous modules *

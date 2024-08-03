@@ -218,7 +218,7 @@ class DINA_Dual_Button extends DINA_Module_Core {
                     'button_one_border_hover_effect' => array( 'dina-ripple-in', 'dina-ripple-out', 'dina-outline-in', 'dina-outline-out' ),
                 ),
                 'show_if'        => array(
-                    'button_one_border_hover_effect' => array( 'dina-underline-from-left', 'dina-underline-from-center', 'dina-underline-from-right', 'dina-overline-from-left', 'dina-overline-from-center', 'dina-overline-from-right', 'dina-underline-reval', 'dina-overline-reval' ),
+                    'button_one_border_hover_effect' => array( 'dina-underline-from-left', 'dina-underline-from-center', 'dina-underline-from-right', 'dina-overline-from-left', 'dina-overline-from-center', 'dina-overline-from-right', 'dina-underline-reveal', 'dina-overline-reveal' ),
                 ),
                 'mobile_options' => true,
             ),
@@ -241,7 +241,7 @@ class DINA_Dual_Button extends DINA_Module_Core {
                     'button_one_border_hover_effect' => array( 'dina-ripple-in', 'dina-ripple-out', 'dina-underline-in', 'dina-underline-out' ),
                 ),
                 'show_if'        => array(
-                    'button_one_border_hover_effect' => array( 'dina-underline-from-left', 'dina-underline-from-center', 'dina-underline-from-right', 'dina-overline-from-left', 'dina-overline-from-center', 'dina-overline-from-right', 'dina-underline-reval', 'dina-overline-reval' ),
+                    'button_one_border_hover_effect' => array( 'dina-underline-from-left', 'dina-underline-from-center', 'dina-underline-from-right', 'dina-overline-from-left', 'dina-overline-from-center', 'dina-overline-from-right', 'dina-underline-reveal', 'dina-overline-reveal' ),
                 ),
                 'mobile_options' => true,
             ),
@@ -251,11 +251,23 @@ class DINA_Dual_Button extends DINA_Module_Core {
                 'type'            => 'select',
                 'option_category' => 'basic_option',
                 'options'         => array(
-                    ''                     => esc_html__( 'Select', 'divinationkit-for-divi' ),
-                    'dina-swipe-to-right'  => esc_html__( 'Swipe To Right', 'divinationkit-for-divi' ),
-                    'dina-swipe-to-left'   => esc_html__( 'Swipe To Left', 'divinationkit-for-divi' ),
-                    'dina-swipe-to-bottom' => esc_html__( 'Swipe To Bottom', 'divinationkit-for-divi' ),
-                    'dina-swipe-to-top'    => esc_html__( 'Swipe To Top', 'divinationkit-for-divi' ),
+                    ''                            => esc_html__( 'Select', 'divinationkit-for-divi' ),
+                    'dina-swipe-to-right'         => esc_html__( 'Swipe To Right', 'divinationkit-for-divi' ),
+                    'dina-swipe-to-left'          => esc_html__( 'Swipe To Left', 'divinationkit-for-divi' ),
+                    'dina-swipe-to-bottom'        => esc_html__( 'Swipe To Bottom', 'divinationkit-for-divi' ),
+                    'dina-swipe-to-top'           => esc_html__( 'Swipe To Top', 'divinationkit-for-divi' ),
+                    'dina-bounce-to-right'        => esc_html__( 'Bounce To Right', 'divinationkit-for-divi' ),
+                    'dina-bounce-to-left'         => esc_html__( 'Bounce To Left', 'divinationkit-for-divi' ),
+                    'dina-bounce-to-bottom'       => esc_html__( 'Bounce To Bottom', 'divinationkit-for-divi' ),
+                    'dina-bounce-to-top'          => esc_html__( 'Bounce To Top', 'divinationkit-for-divi' ),
+                    'dina-radial-in'              => esc_html__( 'Radial In', 'divinationkit-for-divi' ),
+                    'dina-radial-out'             => esc_html__( 'Radial Out', 'divinationkit-for-divi' ),
+                    'dina-rectangle-in'           => esc_html__( 'Rectangle In', 'divinationkit-for-divi' ),
+                    'dina-rectangle-out'          => esc_html__( 'Rectangle Out', 'divinationkit-for-divi' ),
+                    'dina-shutter-in-horizontal'  => esc_html__( 'Shutter In Horizontal', 'divinationkit-for-divi' ),
+                    'dina-shutter-out-horizontal' => esc_html__( 'Shutter Out Horizontal', 'divinationkit-for-divi' ),
+                    'dina-shutter-in-vertical'    => esc_html__( 'Shutter In Vertical', 'divinationkit-for-divi' ),
+                    'dina-shutter-out-vertical'   => esc_html__( 'Shutter Out Vertical', 'divinationkit-for-divi' ),
                 ),
                 'tab_slug'        => 'advanced',
                 'toggle_slug'     => 'button_one_hover_effect',
@@ -266,83 +278,16 @@ class DINA_Dual_Button extends DINA_Module_Core {
                 'label'          => esc_html__( 'Background Color', 'divinationkit-for-divi' ),
                 'description'    => esc_html__( 'Choose hover effect background color', 'divinationkit-for-divi' ),
                 'type'           => 'color-alpha',
-                'default'        => '#2064d1',
+                'default'        => '#e02b20',
                 'custom_color'   => true,
                 'tab_slug'       => 'advanced',
                 'toggle_slug'    => 'button_one_hover_effect',
                 'sub_toggle'     => 'bg',
-                'show_if_not'    => array(
-                    'button_one_bg_hover_effect' => '',
-                ),
                 'mobile_options' => true,
             ),
         );
 
-        $button_two_hover_effect = array(
-            'button_two_2d_hover_effect'     => array(
-                'label'           => esc_html__( 'Select 2D Hover Effect', 'divinationkit-for-divi' ),
-                'type'            => 'select',
-                'option_category' => 'basic_option',
-                'options'         => array(
-                    ''                                  => esc_html__( 'Select', 'divinationkit-for-divi' ),
-                    'dina-hover-grow'                   => esc_html__( 'Grow', 'divinationkit-for-divi' ),
-                    'dina-hover-shrink'                 => esc_html__( 'Shrink', 'divinationkit-for-divi' ),
-                    'dina-hover-pulse'                  => esc_html__( 'Pulse', 'divinationkit-for-divi' ),
-                    'dina-hover-pulse-grow'             => esc_html__( 'Pulse Gow', 'divinationkit-for-divi' ),
-                    'dina-hover-pulse-shrink'           => esc_html__( 'Pulse Shrink', 'divinationkit-for-divi' ),
-                    'dina-hover-pop'                    => esc_html__( 'Pop', 'divinationkit-for-divi' ),
-                    'dina-hover-push'                   => esc_html__( 'Push', 'divinationkit-for-divi' ),
-                    'dina-hover-bounce-in'              => esc_html__( 'Bounce In', 'divinationkit-for-divi' ),
-                    'dina-hover-bounce-out'             => esc_html__( 'Bounce Out', 'divinationkit-for-divi' ),
-                    'dina-hover-rotate'                 => esc_html__( 'Rotate', 'divinationkit-for-divi' ),
-                    'dina-hover-rotate-grow'            => esc_html__( 'Rotate Grow', 'divinationkit-for-divi' ),
-                    'dina-hover-float'                  => esc_html__( 'Float', 'divinationkit-for-divi' ),
-                    'dina-hover-sink'                   => esc_html__( 'Sink', 'divinationkit-for-divi' ),
-                    'dina-hover-bob'                    => esc_html__( 'Bob', 'divinationkit-for-divi' ),
-                    'dina-hover-hang'                   => esc_html__( 'Hang', 'divinationkit-for-divi' ),
-                    'dina-hover-skew-forward'           => esc_html__( 'Skew Forward', 'divinationkit-for-divi' ),
-                    'dina-hover-skew-backward'          => esc_html__( 'Skew Backward', 'divinationkit-for-divi' ),
-                    'dina-hover-wobble-horizontal'      => esc_html__( 'Wobble Horizontal', 'divinationkit-for-divi' ),
-                    'dina-hover-wobble-vertical'        => esc_html__( 'Wobble Vertical', 'divinationkit-for-divi' ),
-                    'dina-hover-wobble-to-bottom-right' => esc_html__( 'Wobble to Bottom Right', 'divinationkit-for-divi' ),
-                    'dina-hover-wobble-to-top-right'    => esc_html__( 'Wobble to Top Right', 'divinationkit-for-divi' ),
-                    'dina-hover-wobble-top'             => esc_html__( 'Wobble Top', 'divinationkit-for-divi' ),
-                    'dina-hover-wobble-bottom'          => esc_html__( 'Wobble Bottom', 'divinationkit-for-divi' ),
-                    'dina-hover-wobble-skew'            => esc_html__( 'Wobble Skew', 'divinationkit-for-divi' ),
-                    'dina-hover-buzz'                   => esc_html__( 'Buzz', 'divinationkit-for-divi' ),
-                    'dina-hover-buzz-out'               => esc_html__( 'Buzz Out', 'divinationkit-for-divi' ),
-                    'dina-hover-forward'                => esc_html__( 'Forward', 'divinationkit-for-divi' ),
-                    'dina-hover-backward'               => esc_html__( 'Backward', 'divinationkit-for-divi' ),
-                ),
-                'tab_slug'        => 'advanced',
-                'toggle_slug'     => 'button_two_hover_effect',
-                'sub_toggle'      => '2d',
-            ),
-            'button_two_border_hover_effect' => array(
-                'label'           => esc_html__( 'Select Border Hover Effect', 'divinationkit-for-divi' ),
-                'type'            => 'select',
-                'option_category' => 'basic_option',
-                'options'         => array(
-                    ''    => esc_html__( 'Select', 'divinationkit-for-divi' ),
-                    'two' => esc_html__( 'two', 'divinationkit-for-divi' ),
-                ),
-                'tab_slug'        => 'advanced',
-                'toggle_slug'     => 'button_two_hover_effect',
-                'sub_toggle'      => 'border',
-            ),
-            'button_two_bg_hover_effect'     => array(
-                'label'           => esc_html__( 'Select Background Hover Effect', 'divinationkit-for-divi' ),
-                'type'            => 'select',
-                'option_category' => 'basic_option',
-                'options'         => array(
-                    ''    => esc_html__( 'Select', 'divinationkit-for-divi' ),
-                    'two' => esc_html__( 'two', 'divinationkit-for-divi' ),
-                ),
-                'tab_slug'        => 'advanced',
-                'toggle_slug'     => 'button_two_hover_effect',
-                'sub_toggle'      => 'bg',
-            ),
-        );
+        $button_two_hover_effect = array();
 
         $layout = array(
 
@@ -1074,6 +1019,7 @@ class DINA_Dual_Button extends DINA_Module_Core {
         $this->render_css( $render_slug );
         wp_enqueue_style( 'dina-2d-hover-effects' );
         wp_enqueue_style( 'dina-border-hover-effects' );
+        wp_enqueue_style( 'dina-bg-hover-effects' );
 
         return sprintf(
             '<div class="dina_dual_button-container">

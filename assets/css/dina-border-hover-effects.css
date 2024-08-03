@@ -169,7 +169,7 @@
     left: 0;
     right: 100%;
     bottom: 0;
-    background: #2098d1;
+    background: #e02b20;
     height: 4px;
     -webkit-transition-property: right;
     -o-transition-property: right;
@@ -200,7 +200,7 @@
     left: 51%;
     right: 51%;
     bottom: 0;
-    background: #2098d1;
+    background: #e02b20;
     height: 4px;
     -webkit-transition-property: left, right;
     -o-transition-property: left, right;
@@ -232,7 +232,7 @@
     left: 100%;
     right: 0;
     bottom: 0;
-    background: #2098d1;
+    background: #e02b20;
     height: 4px;
     -webkit-transition-property: left;
     -o-transition-property: left;
@@ -263,7 +263,7 @@
     left: 0;
     right: 100%;
     top: 0;
-    background: #2098d1;
+    background: #e02b20;
     height: 4px;
     -webkit-transition-property: right;
     -o-transition-property: right;
@@ -294,7 +294,7 @@
     left: 51%;
     right: 51%;
     top: 0;
-    background: #2098d1;
+    background: #e02b20;
     height: 4px;
     -webkit-transition-property: left, right;
     -o-transition-property: left, right;
@@ -326,7 +326,7 @@
     left: 100%;
     right: 0;
     top: 0;
-    background: #2098d1;
+    background: #e02b20;
     height: 4px;
     -webkit-transition-property: left;
     -o-transition-property: left;
@@ -357,7 +357,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: #2098d1;
+    background: #e02b20;
     height: 4px;
     -webkit-transform: translateY(4px);
     -ms-transform: translateY(4px);
@@ -396,7 +396,7 @@
     left: 0;
     right: 0;
     top: 0;
-    background: #2098d1;
+    background: #e02b20;
     height: 4px;
     -webkit-transform: translateY(-4px);
     -ms-transform: translateY(-4px);
