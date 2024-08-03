@@ -1,0 +1,36 @@
+.dina_progress_bar-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.dina_progress_bar-wrapper {
+    flex: 1;
+}
+
+.dina_progress-level {
+    position: relative;
+    width: 0;
+    transition: width 1.5s ease;
+}
+
+.dina_progress_bar-show-level .dina_progress-level:before {
+    position: absolute;
+    content: attr(data-per);
+    width: -moz-max-content;
+    width: max-content;
+    height: auto;
+    padding: 5px 10px;
+    color: #fff;
+    left: 100%;
+    transform: translateX(-50%);
+}
+.dina_progress_bar-show-level .dina_progress-level::after {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    content: '';
+    right: 0;
+    transform: translateX(50%) rotate(45deg);
+}

@@ -1,16 +1,34 @@
-.dina_dual_button-container,
-.dina_dual_button-one-wrapper,
-.dina_dual_button-two-wrapper {
+.dina_dual_button-container {
     display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-.dina_dual_button-separator-icon,
-.dina_dual_button-separator-text {
+.dina_button {
+    position: relative;
+    min-width: fit-content;
+    text-align: center;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1;
+    transition: all 300ms ease 0ms;
+}
+
+.dina_button:hover {
+    color: #fff;
+}
+
+.dina_button_one-icon,
+.dina_button_two-icon {
+    position: absolute;
+    font-size: inherit;
+    line-height: inherit;
+    font-style: inherit;
+    transition: all 300ms ease 0ms;
+}
+
+.dina_dual_button-separator {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.et_pb_button[data-icon]:not([data-icon='']):after {
-    content: attr(data-icon);
 }

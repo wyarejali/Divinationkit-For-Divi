@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { setResponsiveCSS } from '../Core/DiviNationKit-core';
 
+import './styles.css';
+
 export class IconList extends Component {
     static slug = 'dina_icon_list';
 
@@ -61,6 +63,42 @@ export class IconList extends Component {
                 optionName: 'item_padding',
                 property: 'padding',
                 important: true,
+            },
+
+            {
+                selector: '%%order_class%% .dina_tooltip-wrapper',
+                optionName: 'tooltip_bg',
+                property: 'background',
+            },
+            {
+                selector: '%%order_class%% .dina_tooltip-wrapper::after',
+                optionName: 'tooltip_bg',
+                property: 'border-top-color',
+            },
+            {
+                selector: '%%order_class%% .dina_tooltip-wrapper',
+                optionName: 'tooltip_text_color',
+                property: 'color',
+            },
+            {
+                selector: '%%order_class%% .dina_tooltip-wrapper',
+                optionName: 'tooltip_font_size',
+                property: 'font-size',
+            },
+            {
+                selector: '%%order_class%% .dina_tooltip-trigger::after',
+                optionName: 'tooltip_button_color',
+                property: 'color',
+            },
+            {
+                selector: '%%order_class%% .dina_tooltip-trigger::after',
+                optionName: 'tooltip_button_size',
+                property: 'font-size',
+            },
+            {
+                selector: '%%order_class%% .dina_tooltip-wrapper',
+                optionName: 'tooltip_padding',
+                property: 'padding',
             },
         ]);
 

@@ -1,5 +1,10 @@
+.dina_rating-container,
 .dina_rating-wrapper {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+.dina_rating-container .dina_rating-title {
+    padding-bottom: 0;
 }

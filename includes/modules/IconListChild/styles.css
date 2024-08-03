@@ -6,8 +6,19 @@
 .dina_icon_list-title {
     margin: 0;
     padding: 0;
+    line-height: 1.5;
 }
 
 .dina_icon_list-icon i.dina_icon {
     display: block;
+}
+
+.dina_icon_list-content {
+    flex: 1;
+}
+
+.dina_icon_list-use-tooltip {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }

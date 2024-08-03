@@ -1,0 +1,10 @@
+.dina_business_hour-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dina_business_hour-separator {
+    flex: 1 1;
+    border-top-width: 1px;
+}

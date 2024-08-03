@@ -5,7 +5,7 @@ Donate link: https://divinationkit.com/donate
 Requires at least: 5.0
 Tested up to: 6.5.5
 Requires PHP: 7.0
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPL2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -102,13 +102,33 @@ PHP version >= 7.0
 
 **Is this plugin free?**
 
-Yes! Divi Nation Kit is absolutely free. There is no hidden charge. 
+Yes! DiviNationKit is absolutely free. There is no hidden charge. 
 
 == Screenshots ==
+1. Powerful Modules
+2. 4 Types of Review Box
+3. 2 Types of Price List
+4. Logo Slider
 
 == Changelog ==
 
-= 1.0.2 - 12.07.2024 =
+= Version 1.0.3 - date =
+Added New Modules, features and fixed issues
+- [Compatibility]: 
+- Added: Skill Progress Bar
+- Added: Business Hour
+- Added: Gradient Heading
+- Added: Testimonial Slider
+- Added: FAQ - Accordion
+- Fixed: Update Dual Button module to customize in a organized way + auto 2 line
+- Fixed: Price list update
+- Fixed: flip card box shadow
+- Fixed: Logo slider RTL mode not working in live 
+- Feature: Text area added for Rating module.
+- Feature: Tooltip on icon list module and fixed border issue.
+- Feature: Added badge on icon box module.
+
+= Version 1.0.2 - 12.07.2024 =
 * Fixed previous modules *
 * Security Updates *
 * Module added: Dual Button *
@@ -116,8 +136,8 @@ Yes! Divi Nation Kit is absolutely free. There is no hidden charge.
 * Module added: Rating *
 * Module added: Review *
 
-= 1.0.1 - 11.07.2024 =
-* Officeal Public release
+= Version 1.0.1 - 11.07.2024 =
+* Official Public release
 
 == Upgrade Notice ==
 There is a Security updates, please update "Divinationkit" as soon as possible.

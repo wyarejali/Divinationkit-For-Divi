@@ -53,6 +53,33 @@ export class IconBox extends Component {
                 optionName: 'icon_margin',
                 property: 'margin',
             },
+
+            {
+                selector: '%%order_class%% .dina_icon_box-badge',
+                optionName: 'badge_bg',
+                property: 'background',
+                defaultCss: 'position: absolute;',
+            },
+            {
+                selector: '%%order_class%% .dina_icon_box-badge',
+                optionName: 'badge_padding',
+                property: 'padding',
+            },
+            {
+                selector: '%%order_class%% .dina_icon_box-badge',
+                optionName: 'offsetX',
+                property: 'top',
+            },
+            {
+                selector: '%%order_class%% .dina_icon_box-badge',
+                optionName: 'offsetY',
+                property: 'right',
+            },
+            {
+                selector: '%%order_class%% .dina_icon_box-badge',
+                optionName: 'badge_z_index',
+                property: 'z-index',
+            },
         ]);
 
         return additionalCss.concat(iconStyle).concat(responsiveCss);
@@ -120,7 +147,7 @@ export class IconBox extends Component {
                     ? props.button_link
                     : '';
 
-            const buttonicon =
+            const buttonIcon =
                 typeof props.button_icon !== 'undefined'
                     ? utils.processFontIcon(props.button_icon)
                     : '6';
@@ -144,12 +171,21 @@ export class IconBox extends Component {
                         )} dina_btn dina_icon_box-btn`}
                         href={buttonUrl}
                         target={target}
-                        data-icon={buttonicon}
+                        data-icon={buttonIcon}
                     >
                         {props.dynamic.button_text.render()}
                     </a>
                 </div>
             );
+        }
+    }
+
+    renderBadge() {
+        const isUseBadge = this.props.use_badge === 'on' ? true : false;
+        const badgeText = this.props.badge_text;
+
+        if (isUseBadge) {
+            return <span className="dina_icon_box-badge">{badgeText}</span>;
         }
     }
 
@@ -165,6 +201,7 @@ export class IconBox extends Component {
                     {this.renderContent()}
                     {this.renderButton()}
                 </div>
+                {this.renderBadge()}
             </div>
         );
     }

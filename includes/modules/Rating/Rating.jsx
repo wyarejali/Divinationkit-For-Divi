@@ -122,9 +122,24 @@ export class Rating extends Component {
         }
     }
 
+    renderRatingTitle = () => {
+        const useTitle = this.props.use_title;
+        const heading = this.props.rating_title;
+        const Title = this.props.rating_title_level
+            ? this.props.rating_title_level
+            : 'h5';
+
+        if (heading && useTitle === 'on') {
+            return <Title className="dina_rating-title">{heading}</Title>;
+        }
+    };
+
     render() {
         return (
-            <div className="dina_rating-container">{this.renderRating()}</div>
+            <div className="dina_rating-container">
+                {this.renderRating()}
+                {this.renderRatingTitle()}
+            </div>
         );
     }
 }

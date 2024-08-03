@@ -45,6 +45,8 @@ jQuery(function($) {
             (window.ETBuilderBackend.defaults.dina_icon_list_child = {
                 icon: '&#xe052;||divi||400',
                 title: title,
+                tooltip_title: 'Tooltip Title',
+                tooltip_description: content,
             }),
             (window.ETBuilderBackend.defaults.dina_marquee_text = {
                 text: title,
@@ -57,16 +59,45 @@ jQuery(function($) {
             }),
             (window.ETBuilderBackend.defaults.dina_dual_button = {
                 button_one_text: 'Button One',
+                button_one_icon: '&#x35;||divi||400',
                 button_one_url: '#',
-                separator_icon: '&#xe089;||divi||400',
+                separator_icon: '&#xe030;||divi||400',
                 separator_text: 'Or',
                 button_two_text: 'Button Two',
+                button_two_icon: '&#x35;||divi||400',
                 button_two_url: '#',
             }),
             (window.ETBuilderBackend.defaults.dina_person = {
                 image: userImage,
                 name: 'John Doe',
                 position: 'Developer at Microsoft',
+            }),
+            (window.ETBuilderBackend.defaults.dina_rating = {
+                rating_title: '10k+ Happy Customars',
+            }),
+            (window.ETBuilderBackend.defaults.dina_progress_bar = {
+                text_placement: 'outside',
+                hide_name: 'off',
+                hide_level: 'off',
+                bar_height: '10px',
+                border_radius: '10px',
+                offset_x: '10px',
+                tooltip_round: '3px',
+            }),
+            (window.ETBuilderBackend.defaults.dina_progress_bar_child = {
+                name: 'HTML',
+                level: '90%',
+                tooltip_padding: 'false|false|false|false',
+            }),
+            (window.ETBuilderBackend.defaults.dina_business_hour_child = {
+                hide_separator: 'off',
+                separator_style: 'solid',
+                day: 'Monday',
+                time: '08:00am - 18:00pm',
+                separator_position: 'center',
+            }),
+            (window.ETBuilderBackend.defaults.dina_gradient_heading = {
+                title: 'Your Gradient Title will goes here',
             }),
             (window.ETBuilderBackend.defaults.dina_review_box = {
                 image: userImage,

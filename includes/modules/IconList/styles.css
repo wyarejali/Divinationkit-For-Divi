@@ -1,0 +1,103 @@
+/* Tooltip CSS */
+.dina_tooltip_container {
+    position: relative;
+}
+
+.dina_tooltip_container {
+    width: 16px;
+    height: 16px;
+}
+
+.dina_tooltip-trigger {
+    position: relative;
+    top: 2px;
+}
+
+.dina_tooltip-trigger::after {
+    position: absolute;
+    content: '\71';
+    font-family: ETmodules;
+    line-height: 1;
+    top: 0;
+    left: 0;
+    color: black;
+}
+
+.dina_tooltip-wrapper {
+    position: absolute;
+    padding: 14px 20px;
+    width: max-content;
+    max-width: 320px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 0.05);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 99;
+}
+
+.dina_tooltip-wrapper::after {
+    position: absolute;
+    content: '';
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 9px 8px 0 8px;
+    border-color: #333 transparent transparent transparent;
+}
+
+.dina_tooltip_container:hover .dina_tooltip-wrapper,
+.dina_tooltip-wrapper:hover {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Tooltip possition top */
+.dina_tooltip-wrapper.dina_tooltip-top {
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+}
+.dina_tooltip-wrapper.dina_tooltip-top::after {
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Tooltip possition bottom */
+.dina_tooltip-wrapper.dina_tooltip-bottom {
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+}
+.dina_tooltip-wrapper.dina_tooltip-bottom::after {
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg);
+}
+
+/* Tooltip possition left */
+.dina_tooltip-wrapper.dina_tooltip-left {
+    right: calc(100% + 10px);
+    top: 50%;
+    transform: translateY(-50%);
+}
+.dina_tooltip-wrapper.dina_tooltip-left::after {
+    left: calc(100% - 4px);
+    top: 50%;
+    transform: translateY(-50%) rotate(270deg);
+}
+
+/* Tooltip possition right */
+.dina_tooltip-wrapper.dina_tooltip-right {
+    left: calc(100% + 10px);
+    top: 50%;
+    transform: translateY(-50%);
+}
+.dina_tooltip-wrapper.dina_tooltip-right::after {
+    right: calc(100% - 4px);
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+}
+
+/* Tooltip CSS End */
