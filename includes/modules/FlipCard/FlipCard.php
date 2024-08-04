@@ -1135,6 +1135,14 @@ class DINA_Flip_Card extends DINA_Module_Core {
             ),
         );
 
+        $advanced_fields['box_shadow'] = array(
+            'default' => array(
+                'css' => array(
+                    'main' => '%%order_class%% .dina_flip_card-container',
+                ),
+            ),
+        );
+
         return $advanced_fields;
     }
 

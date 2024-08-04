@@ -1198,9 +1198,26 @@ class DINA_Dual_Button extends DINA_Module_Core {
     public function render( $attrs, $content, $render_slug ) {
 
         $this->render_css( $render_slug );
-        wp_enqueue_style( 'dina-2d-hover-effects' );
-        wp_enqueue_style( 'dina-border-hover-effects' );
-        wp_enqueue_style( 'dina-bg-hover-effects' );
+
+        $one_2d_hover     = $this->props['button_one_2d_hover_effect'];
+        $one_border_hover = $this->props['button_one_border_hover_effect'];
+        $one_bg_hover     = $this->props['button_one_bg_hover_effect'];
+
+        $two_2d_hover     = $this->props['button_two_2d_hover_effect'];
+        $two_border_hover = $this->props['button_two_border_hover_effect'];
+        $two_bg_hover     = $this->props['button_two_bg_hover_effect'];
+
+        if ( $one_2d_hover !== '' || $two_2d_hover !== '' ) {
+            wp_enqueue_style( 'dina-2d-hover-effects' );
+        }
+
+        if ( $one_border_hover !== '' || $two_border_hover !== '' ) {
+            wp_enqueue_style( 'dina-border-hover-effects' );
+        }
+
+        if ( $one_bg_hover !== '' || $two_bg_hover !== '' ) {
+            wp_enqueue_style( 'dina-bg-hover-effects' );
+        }
 
         return sprintf(
             '<div class="dina_dual_button-container">

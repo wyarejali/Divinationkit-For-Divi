@@ -119,12 +119,11 @@ Added New Modules, features and fixed issues
 - Added: Gradient Heading
 - Fixed: Update Dual Button module to customize in a organized way + auto 2 line
 - Fixed: Price list image alignment issue. Items margin, padding, border
+- Fixed: Logo slider RTL mode not working in live 
+- Fixed: flip card box shadow
 - Feature: Text area added for Rating module.
 - Feature: Tooltip on icon list module and fixed border issue.
-- Feature: Added badge on icon box module.
-
-- Fixed: flip card box shadow
-- Fixed: Logo slider RTL mode not working in live 
+- Feature: Added badge on icon box module
 
 - Added: Testimonial Slider
 - Added: FAQ - Accordion

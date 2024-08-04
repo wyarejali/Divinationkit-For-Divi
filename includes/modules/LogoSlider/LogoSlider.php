@@ -493,6 +493,7 @@ class DINA_Logo_Slider extends DINA_Module_Core {
     public function render( $attrs, $content, $render_slug ) {
 
         $show_on_hover = $this->props['arrow_show_on_hover'] === 'on' ? 'show-arrow-on-hover' : '';
+        $direction     = $this->props['rtl'] === 'on' ? 'rtl' : 'ltr';
 
         // Enqueue slick slider css and js
         wp_enqueue_style( 'dina-slick' );
@@ -502,13 +503,13 @@ class DINA_Logo_Slider extends DINA_Module_Core {
         $this->render_css( $render_slug );
 
         return sprintf(
-            '<div class="dina_logo_slider-container %3$s" data-settings=\'%2$s\'>
+            '<div class="dina_logo_slider-container %3$s" data-settings=\'%2$s\' dir="%4$s">
                 %1$s
             </div>',
             $this->content,
             $this->dina_get_slick_slider_settings(),
-            $show_on_hover
-
+            $show_on_hover,
+            $direction,
         );
     }
 
