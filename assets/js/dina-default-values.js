@@ -87,7 +87,6 @@ jQuery(function($) {
             (window.ETBuilderBackend.defaults.dina_progress_bar_child = {
                 name: 'HTML',
                 level: '90%',
-                tooltip_padding: 'false|false|false|false',
             }),
             (window.ETBuilderBackend.defaults.dina_business_hour_child = {
                 hide_separator: 'off',

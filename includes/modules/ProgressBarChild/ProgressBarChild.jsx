@@ -10,6 +10,7 @@ export class ProgressBarChild extends Component {
 
     static css(props) {
         let additionalCss = [],
+            responsiveCSS,
             barHeight = props.bar_height,
             barHeightTablet = props.bar_height_tablet,
             barHeightMobile = props.bar_height_mobile,
@@ -124,7 +125,7 @@ export class ProgressBarChild extends Component {
             },
         ]);
 
-        const responsiveCSS = setResponsiveCSS(props, [
+        responsiveCSS = setResponsiveCSS(props, [
             {
                 selector: '%%order_class%% .dina_progress_bar-icon i.dina_icon',
                 optionName: 'icon_color',
@@ -163,14 +164,19 @@ export class ProgressBarChild extends Component {
                 optionName: 'tooltip_round',
                 property: 'border-radius',
             },
-            {
-                selector:
-                    '.dina_progress_bar-container %%order_class%% .dina_progress-level:before',
-                optionName: 'tooltip_padding',
-                property: 'padding',
-            },
         ]);
-        console.log(props);
+
+        if (props.tooltip_padding) {
+            responsiveCSS = setResponsiveCSS(props, [
+                {
+                    selector:
+                        '.dina_progress_bar-container %%order_class%% .dina_progress-level:before',
+                    optionName: 'tooltip_padding',
+                    property: 'padding',
+                },
+            ]);
+        }
+
         return additionalCss
             .concat(bar_bg)
             .concat(level_bg)

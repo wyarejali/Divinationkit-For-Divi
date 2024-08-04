@@ -204,7 +204,6 @@ class DINA_Progress_Bar_Child extends DINA_Module_Core {
                 'tab_slug'       => 'advanced',
                 'toggle_slug'    => 'level',
                 'sub_toggle'     => 'design',
-                'default'        => 'false|false|false|false',
                 'mobile_options' => true,
             ),
 

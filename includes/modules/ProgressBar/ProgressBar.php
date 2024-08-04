@@ -17,12 +17,7 @@ class DINA_Progress_Bar extends DINA_Module_Core {
         $this->icon_path   = $this->dina_module_icon( 'progress-bar' );
 
         $this->settings_modal_toggles = array(
-            'general'  => array(
-                'toggles' => array(
-                    'content'  => esc_html__( 'Content', 'divinationkit-for-divi' ),
-                    'settings' => esc_html__( 'Settings', 'divinationkit-for-divi' ),
-                ),
-            ),
+
             'advanced' => array(
                 'toggles' => array(
                     'progress_bar' => esc_html__( 'Progress Bar', 'divinationkit-for-divi' ),
@@ -246,22 +241,7 @@ class DINA_Progress_Bar extends DINA_Module_Core {
             ),
         );
 
-        $settings = array(
-
-            'name_placement' => array(
-                'label'       => esc_html__( 'Name Placement', 'divinationkit-for-divi' ),
-                'description' => esc_html__( 'Define the position of progress bar Name position (outside or inside) progress bar', 'divinationkit-for-divi' ),
-                'type'        => 'select',
-                'options'     => array(
-                    'outside' => esc_html__( 'Outside', 'divinationkit-for-divi' ),
-                    'inside'  => esc_html__( 'Inside', 'divinationkit-for-divi' ),
-                ),
-                'default'     => 'outside',
-                'toggle_slug' => 'content',
-            ),
-        );
-
-        return array_merge( $bar_bg, $level_bg, $design, $settings );
+        return array_merge( $bar_bg, $level_bg, $design );
     }
 
     public function get_advanced_fields_config() {

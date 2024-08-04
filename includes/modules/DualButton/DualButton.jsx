@@ -26,8 +26,8 @@ export class DualButton extends Component {
             buttonOneBg,
             buttonTwoBg,
             responsiveCss,
-            borderHoverEffect,
-            bgHoverEffect,
+            borderHoverEffectCss,
+            bgHoverEffectCss,
             buttonOneIconPlacement = props.button_one_icon_placement,
             buttonOneIconShowOnHover = props.button_one_icon_show_on_hover,
             buttonTwoIconPlacement = props.button_two_icon_placement,
@@ -237,15 +237,15 @@ export class DualButton extends Component {
         ]);
 
         // border hover
-        const oneBorderHoverEffect = props.button_one_border_hover_effect;
-        if (oneBorderHoverEffect !== '') {
+        const borderHoverEffectOne = props.button_one_border_hover_effect;
+        if (borderHoverEffectOne !== '') {
             if (
-                oneBorderHoverEffect === 'dina-ripple-in' ||
-                oneBorderHoverEffect === 'dina-ripple-out' ||
-                oneBorderHoverEffect === 'dina-outline-in' ||
-                oneBorderHoverEffect === 'dina-outline-out'
+                borderHoverEffectOne === 'dina-ripple-in' ||
+                borderHoverEffectOne === 'dina-ripple-out' ||
+                borderHoverEffectOne === 'dina-outline-in' ||
+                borderHoverEffectOne === 'dina-outline-out'
             ) {
-                borderHoverEffect = setResponsiveCSS(props, [
+                borderHoverEffectCss = setResponsiveCSS(props, [
                     {
                         selector:
                             '%%order_class%% .dina_button_one.dina-border-hover-effect::before',
@@ -260,7 +260,7 @@ export class DualButton extends Component {
                     },
                 ]);
             } else {
-                borderHoverEffect = setResponsiveCSS(props, [
+                borderHoverEffectCss = setResponsiveCSS(props, [
                     {
                         selector:
                             '%%order_class%% .dina_button_one.dina-border-hover-effect::before',
@@ -278,14 +278,69 @@ export class DualButton extends Component {
         }
 
         // BG hover effect
-        const bgEffect = props.button_one_bg_hover_effect;
+        const bgEffectOne = props.button_one_bg_hover_effect;
 
-        if (bgEffect !== '') {
-            bgHoverEffect = setResponsiveCSS(props, [
+        if (bgEffectOne !== '') {
+            bgHoverEffectCss = setResponsiveCSS(props, [
                 {
                     selector:
                         '%%order_class%% .dina_button_one.dina-bg-hover-effect::before',
                     optionName: 'button_one_hover_bg_color',
+                    property: 'background',
+                },
+            ]);
+        }
+
+        // border hover two
+        const borderHoverEffectTwo = props.button_two_border_hover_effect;
+        if (borderHoverEffectTwo !== '') {
+            if (
+                borderHoverEffectTwo === 'dina-ripple-in' ||
+                borderHoverEffectTwo === 'dina-ripple-out' ||
+                borderHoverEffectTwo === 'dina-outline-in' ||
+                borderHoverEffectTwo === 'dina-outline-out'
+            ) {
+                borderHoverEffectCss = setResponsiveCSS(props, [
+                    {
+                        selector:
+                            '%%order_class%% .dina_button_two.dina-border-hover-effect::before',
+                        optionName: 'button_two_hover_border_color',
+                        property: 'border-color',
+                    },
+                    {
+                        selector:
+                            '%%order_class%% .dina_button_two.dina-border-hover-effect::before',
+                        optionName: 'button_two_hover_border_width',
+                        property: 'border-width',
+                    },
+                ]);
+            } else {
+                borderHoverEffectCss = setResponsiveCSS(props, [
+                    {
+                        selector:
+                            '%%order_class%% .dina_button_two.dina-border-hover-effect::before',
+                        optionName: 'button_two_hover_border_bg_color',
+                        property: 'background',
+                    },
+                    {
+                        selector:
+                            '%%order_class%% .dina_button_two.dina-border-hover-effect::before',
+                        optionName: 'button_two_hover_border_bg_height',
+                        property: 'height',
+                    },
+                ]);
+            }
+        }
+
+        // BG hover effect
+        const bgEffectTwo = props.button_two_bg_hover_effect;
+
+        if (bgEffectTwo !== '') {
+            bgHoverEffectCss = setResponsiveCSS(props, [
+                {
+                    selector:
+                        '%%order_class%% .dina_button_two.dina-bg-hover-effect::before',
+                    optionName: 'button_two_hover_bg_color',
                     property: 'background',
                 },
             ]);
@@ -298,8 +353,8 @@ export class DualButton extends Component {
             .concat(buttonOneBg)
             .concat(buttonTwoBg)
             .concat(responsiveCss)
-            .concat(borderHoverEffect)
-            .concat(bgHoverEffect);
+            .concat(borderHoverEffectCss)
+            .concat(bgHoverEffectCss);
     }
 
     // Render Button one
@@ -386,10 +441,12 @@ export class DualButton extends Component {
 
         if (buttonBorderHoverEffect !== '') {
             classes.push(buttonBorderHoverEffect);
+            classes.push('dina-border-hover-effect');
         }
 
         if (buttonBgHoverEffect !== '') {
             classes.push(buttonBgHoverEffect);
+            classes.push('dina-bg-hover-effect');
         }
 
         let icon;

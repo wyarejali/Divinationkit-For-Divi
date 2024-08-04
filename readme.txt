@@ -117,6 +117,7 @@ Added New Modules, features and fixed issues
 - Added: Skill Progress Bar
 - Added: Business Hour
 - Added: Gradient Heading
+- Fixed: Update Dual Button module to customize in a organized way + auto 2 line
 - Fixed: Price list update
 - Fixed: flip card box shadow
 - Fixed: Logo slider RTL mode not working in live 
@@ -125,7 +126,6 @@ Added New Modules, features and fixed issues
 - Feature: Added badge on icon box module.
 - Added: Testimonial Slider
 - Added: FAQ - Accordion
-- Fixed: Update Dual Button module to customize in a organized way + auto 2 line
 
 = Version 1.0.2 - 12.07.2024 =
 * Fixed previous modules *
