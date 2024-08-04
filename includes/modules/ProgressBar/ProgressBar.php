@@ -95,7 +95,7 @@ class DINA_Progress_Bar extends DINA_Module_Core {
                 'description'    => esc_html__( 'Define the progress bar height', 'divinationkit-for-divi' ),
                 'type'           => 'range',
                 'default_unit'   => 'px',
-                'default'        => '10px',
+                'default'        => '28px',
                 'range_settings' => array(
                     'min'  => 1,
                     'step' => 1,
@@ -111,7 +111,7 @@ class DINA_Progress_Bar extends DINA_Module_Core {
                 'description'    => esc_html__( 'Define the progress bar corner border radius', 'divinationkit-for-divi' ),
                 'type'           => 'range',
                 'default_unit'   => 'px',
-                'default'        => '10px',
+                'default'        => '3px',
                 'range_settings' => array(
                     'min'  => 1,
                     'step' => 1,

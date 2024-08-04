@@ -10,91 +10,92 @@ class DINA_PriceList extends DINA_Module_Core {
 
     public function init() {
 
-        $this->name        = esc_html__( 'Price List', 'divinationkit-for-divi' );
-        $this->icon_path   = $this->dina_module_icon('price-list');
-        $this->slug        = 'dina_pricelist';
-        $this->child_slug  = 'dina_pricelist_child';
+        $this->name            = esc_html__( 'Price List', 'divinationkit-for-divi' );
+        $this->icon_path       = $this->dina_module_icon( 'price-list' );
+        $this->slug            = 'dina_pricelist';
+        $this->child_slug      = 'dina_pricelist_child';
         $this->child_item_text = esc_html__( 'Price Item', 'divinationkit-for-divi' );
-        $this->vb_support  = 'on';
-        $this->folder_name = 'Divi Nation Kit';
+        $this->vb_support      = 'on';
+        $this->folder_name     = 'Divi Nation Kit';
 
         $this->settings_modal_toggles = array(
-            'general'                       => array(
-                'toggles'                   => array(
-                    'content'               => esc_html__( 'Content', 'divinationkit-for-divi' ),
+            'general'  => array(
+                'toggles' => array(
+                    'content' => esc_html__( 'Content', 'divinationkit-for-divi' ),
                 ),
             ),
-            'advanced'                      => array(
-                'toggles'                   => array(
-                    'layout'                => esc_html__( 'Layout', 'divinationkit-for-divi' ),
-                    'icon'                  => esc_html__( 'Price Icon', 'divinationkit-for-divi' ),
-                    'image'                 => esc_html__( 'Price Image', 'divinationkit-for-divi' ),
-                    'item'                  => esc_html__( 'List Item', 'divinationkit-for-divi' ),
-                    'content'               => array(
+            'advanced' => array(
+                'toggles' => array(
+                    'layout'  => esc_html__( 'Layout', 'divinationkit-for-divi' ),
+                    'icon'    => esc_html__( 'Price Icon', 'divinationkit-for-divi' ),
+                    'image'   => esc_html__( 'Price Image', 'divinationkit-for-divi' ),
+                    'item'    => esc_html__( 'List Item', 'divinationkit-for-divi' ),
+                    'content' => array(
                         'title'             => esc_html__( 'Price List Texts', 'divinationkit-for-divi' ),
                         'tabbed_subtoggles' => true,
                         'sub_toggles'       => array(
-                            'title'         => array(
-                                'name'      => esc_html__( 'Title', 'divinationkit-for-divi' ),
+                            'title'       => array(
+                                'name' => esc_html__( 'Title', 'divinationkit-for-divi' ),
                             ),
-                            'description'   => array(
-                                'name'      => esc_html__( 'Description', 'divinationkit-for-divi' ),
+                            'description' => array(
+                                'name' => esc_html__( 'Description', 'divinationkit-for-divi' ),
                             ),
-                            'price'         => array(
-                                'name'      => esc_html__( 'Price', 'divinationkit-for-divi' ),
+                            'price'       => array(
+                                'name' => esc_html__( 'Price', 'divinationkit-for-divi' ),
                             ),
-                        )
+                        ),
                     ),
+                    'border'  => esc_html__( 'Border', 'divinationkit-for-divi' ),
                 ),
             ),
         );
 
         $this->custom_css_fields = array(
-			'separator'     => array(
-				'label'        => esc_html__( 'Divider', 'divinationkit-for-divi' ),
-				'selector'     => '%%order_class%% .dina_pricelist-content .dina_pricelist-divider',
+            'separator'     => array(
+                'label'    => esc_html__( 'Divider', 'divinationkit-for-divi' ),
+                'selector' => '%%order_class%% .dina_pricelist-content .dina_pricelist-divider',
             ),
-			'icon_wrapper'  => array(
-				'label'        => esc_html__( 'Icon Wrapper', 'divinationkit-for-divi' ),
-				'selector'     => '%%order_class%% .dina_pricelist-icon',
+            'icon_wrapper'  => array(
+                'label'    => esc_html__( 'Icon Wrapper', 'divinationkit-for-divi' ),
+                'selector' => '%%order_class%% .dina_pricelist-icon',
             ),
-			'icon'          => array(
-				'label'        => esc_html__( 'Icon', 'divinationkit-for-divi' ),
-				'selector'     => '%%order_class%% .dina_pricelist-icon i.dina_icon',
+            'icon'          => array(
+                'label'    => esc_html__( 'Icon', 'divinationkit-for-divi' ),
+                'selector' => '%%order_class%% .dina_pricelist-icon i.dina_icon',
             ),
-			'image_wrapper' => array(
-				'label'        => esc_html__( 'Image Wrapper', 'divinationkit-for-divi' ),
-				'selector'     => '%%order_class%% .dina_pricelist-image',
+            'image_wrapper' => array(
+                'label'    => esc_html__( 'Image Wrapper', 'divinationkit-for-divi' ),
+                'selector' => '%%order_class%% .dina_pricelist-image',
             ),
-			'image'         => array(
-				'label'        => esc_html__( 'Image', 'divinationkit-for-divi' ),
-				'selector'     => '%%order_class%% .dina_pricelist-image img',
+            'image'         => array(
+                'label'    => esc_html__( 'Image', 'divinationkit-for-divi' ),
+                'selector' => '%%order_class%% .dina_pricelist-image img',
             ),
-			'title'         => array(
-				'label'        => esc_html__( 'Price Title', 'divinationkit-for-divi' ),
-				'selector'     => '%%order_class%% .dina_pricelist-content .dina_pricelist-title',
+            'title'         => array(
+                'label'    => esc_html__( 'Price Title', 'divinationkit-for-divi' ),
+                'selector' => '%%order_class%% .dina_pricelist-content .dina_pricelist-title',
             ),
-			'price'         => array(
-				'label'        => esc_html__( 'Price', 'divinationkit-for-divi' ),
-				'selector'     => '%%order_class%% .dina_pricelist-content .dina_pricelist-price',
+            'price'         => array(
+                'label'    => esc_html__( 'Price', 'divinationkit-for-divi' ),
+                'selector' => '%%order_class%% .dina_pricelist-content .dina_pricelist-price',
             ),
-			'description'   => array(
-				'label'        => esc_html__( 'Description', 'divinationkit-for-divi' ),
-				'selector'     => '%%order_class%% .dina_pricelist-content .dina_pricelist-description p',
+            'description'   => array(
+                'label'    => esc_html__( 'Description', 'divinationkit-for-divi' ),
+                'selector' => '%%order_class%% .dina_pricelist-content .dina_pricelist-description p',
             ),
         );
     }
 
     public function get_fields() {
-         
+
         $layout = array(
-            'layout'             => array(
+            'layout'           => array(
                 'label'          => esc_html__( 'Choose Layout', 'divinationkit-for-divi' ),
                 'description'    => esc_html__( 'Here you can choose different type of style', 'divinationkit-for-divi' ),
                 'type'           => 'select',
                 'options'        => array(
-                    'flex'       => esc_html__( 'Media position left', 'divinationkit-for-divi' ),
-                    'block'      => esc_html__( 'Media position top', 'divinationkit-for-divi' ),
+                    'flex'  => esc_html__( 'Media position left', 'divinationkit-for-divi' ),
+                    'block' => esc_html__( 'Media position top', 'divinationkit-for-divi' ),
                 ),
                 'default'        => 'flex',
                 'tab_slug'       => 'advanced',
@@ -102,9 +103,9 @@ class DINA_PriceList extends DINA_Module_Core {
                 'mobile_options' => true,
             ),
 
-            'content_position'   => array(
-                'label'          => esc_html__( 'Content alignement', 'divinationkit-for-divi' ),
-                'description'    => esc_html__( 'Define the content vertical alignement', 'divinationkit-for-divi' ),
+            'content_position' => array(
+                'label'          => esc_html__( 'Content alignment', 'divinationkit-for-divi' ),
+                'description'    => esc_html__( 'Define the content vertical alignment', 'divinationkit-for-divi' ),
                 'type'           => 'select',
                 'options'        => array(
                     'flex-start' => esc_html__( 'Top', 'divinationkit-for-divi' ),
@@ -116,11 +117,11 @@ class DINA_PriceList extends DINA_Module_Core {
                 'tab_slug'       => 'advanced',
                 'toggle_slug'    => 'layout',
                 'show_if'        => array(
-                    'layout'     => 'flex',
+                    'layout' => 'flex',
                 ),
             ),
 
-            'content_gap'        => array(
+            'content_gap'      => array(
                 'label'          => esc_html__( 'Content space', 'divinationkit-for-divi' ),
                 'description'    => esc_html__( 'Define space between media and content', 'divinationkit-for-divi' ),
                 'type'           => 'range',
@@ -128,20 +129,20 @@ class DINA_PriceList extends DINA_Module_Core {
                 'default'        => '15px',
                 'mobile_options' => true,
                 'range_settings' => array(
-                    'min'        => 0,
-                    'step'       => 1,
-                    'max'        => 500,
+                    'min'  => 0,
+                    'step' => 1,
+                    'max'  => 500,
                 ),
                 'tab_slug'       => 'advanced',
                 'toggle_slug'    => 'layout',
                 'show_if'        => array(
-                    'layout'     => 'flex',
+                    'layout' => 'flex',
                 ),
-            )
+            ),
         );
 
         $icon_design = array(
-            'icon_bg'            => array(
+            'icon_bg'      => array(
                 'label'          => esc_html__( 'Icon Background', 'divinationkit-for-divi' ),
                 'description'    => esc_html__( 'Here you can change icon background color.', 'divinationkit-for-divi' ),
                 'type'           => 'color-alpha',
@@ -153,7 +154,7 @@ class DINA_PriceList extends DINA_Module_Core {
                 'mobile_options' => true,
             ),
 
-            'icon_color'         => array(
+            'icon_color'   => array(
                 'label'          => esc_html__( 'Icon Color', 'divinationkit-for-divi' ),
                 'description'    => esc_html__( 'Here you can change icon color.', 'divinationkit-for-divi' ),
                 'type'           => 'color-alpha',
@@ -165,7 +166,7 @@ class DINA_PriceList extends DINA_Module_Core {
                 'mobile_options' => true,
             ),
 
-            'icon_size'          => array(
+            'icon_size'    => array(
                 'label'          => esc_html__( 'Icon Size', 'divinationkit-for-divi' ),
                 'description'    => esc_html__( 'Here you can change icon size.', 'divinationkit-for-divi' ),
                 'type'           => 'range',
@@ -176,13 +177,13 @@ class DINA_PriceList extends DINA_Module_Core {
                 'hover'          => 'tabs',
                 'mobile_options' => true,
                 'range_settings' => array(
-                    'min'        => 0,
-                    'step'       => 1,
-                    'max'        => 1000,
+                    'min'  => 0,
+                    'step' => 1,
+                    'max'  => 1000,
                 ),
             ),
 
-            'icon_padding'       => array(
+            'icon_padding' => array(
                 'label'          => esc_html__( 'Image/Icon Padding', 'divinationkit-for-divi' ),
                 'description'    => esc_html__( 'Define custom padding for divider icon', 'divinationkit-for-divi' ),
                 'type'           => 'custom_padding',
@@ -192,7 +193,7 @@ class DINA_PriceList extends DINA_Module_Core {
                 'mobile_options' => true,
             ),
 
-            'icon_margin'        => array(
+            'icon_margin'  => array(
                 'label'          => esc_html__( 'Image/Icon Margin', 'divinationkit-for-divi' ),
                 'description'    => esc_html__( 'Define custom margin for divider icon', 'divinationkit-for-divi' ),
                 'type'           => 'custom_margin',
@@ -204,62 +205,65 @@ class DINA_PriceList extends DINA_Module_Core {
         );
 
         $image_design = array(
-            'image_align'         => array(
+            'image_align'   => array(
                 'label'           => esc_html__( 'Image Alignment', 'divinationkit-for-divi' ),
                 'type'            => 'select',
                 'option_category' => 'configuration',
                 'options'         => array(
-                    'flex-start'  => esc_html__( 'Left', 'divinationkit-for-divi' ),
-                    'center'      => esc_html__( 'Center', 'divinationkit-for-divi' ),
-                    'flex-end'    => esc_html__( 'Right', 'divinationkit-for-divi' ),
+                    'flex-start' => esc_html__( 'Left', 'divinationkit-for-divi' ),
+                    'center'     => esc_html__( 'Center', 'divinationkit-for-divi' ),
+                    'flex-end'   => esc_html__( 'Right', 'divinationkit-for-divi' ),
                 ),
                 'tab_slug'        => 'advanced',
                 'toggle_slug'     => 'image',
                 'default'         => 'flex-start',
-                'mobile_options'  => true
+                'show_if'         => array(
+                    'layout' => 'flex',
+                ),
+                'mobile_options'  => true,
             ),
 
-            'image_width'         => array(
-                'label'           => esc_html__( 'Image Width', 'divinationkit-for-divi' ),
-                'description'     => esc_html__( 'Here you can change image width.', 'divinationkit-for-divi' ),
-                'type'            => 'range',
-                'default_unit'    => '%',
-                'default'         => '50%',
-                'tab_slug'        => 'advanced',
-                'toggle_slug'     => 'image',
-                'mobile_options'  => true,
-                'range_settings'  => array(
-                    'min'         => 0,
-                    'step'        => 1,
-                    'max'         => 100,
+            'image_width'   => array(
+                'label'          => esc_html__( 'Image Width', 'divinationkit-for-divi' ),
+                'description'    => esc_html__( 'Here you can change image width.', 'divinationkit-for-divi' ),
+                'type'           => 'range',
+                'default_unit'   => '%',
+                'default'        => '25%',
+                'tab_slug'       => 'advanced',
+                'toggle_slug'    => 'image',
+                'mobile_options' => true,
+                'range_settings' => array(
+                    'min'  => 0,
+                    'step' => 1,
+                    'max'  => 100,
                 ),
             ),
 
-            'image_margin'        => array(
-                'label'           => esc_html__( 'Image Margin', 'divinationkit-for-divi' ),
-                'descripton'      => esc_html__( 'Define custom margin for price iamge', 'divinationkit-for-divi' ),
-                'type'            => 'custom_margin',
-                'tab_slug'        => 'advanced',
-                'toggle_slug'     => 'image',
-                'default'         => '0px|0px|0px|0px',
-                'mobile_options'  => true,
+            'image_margin'  => array(
+                'label'          => esc_html__( 'Image Margin', 'divinationkit-for-divi' ),
+                'description'    => esc_html__( 'Define custom margin for price image', 'divinationkit-for-divi' ),
+                'type'           => 'custom_margin',
+                'tab_slug'       => 'advanced',
+                'toggle_slug'    => 'image',
+                'default'        => '0px|0px|0px|0px',
+                'mobile_options' => true,
             ),
 
-            'image_padding'       => array(
-                'label'           => esc_html__( 'Image Padding', 'divinationkit-for-divi' ),
-                'descripton'      => esc_html__( 'Define custom padding for price iamge', 'divinationkit-for-divi' ),
-                'type'            => 'custom_padding',
-                'tab_slug'        => 'advanced',
-                'toggle_slug'     => 'image',
-                'default'         => '0px|0px|0px|0px',
-                'mobile_options'  => true,
+            'image_padding' => array(
+                'label'          => esc_html__( 'Image Padding', 'divinationkit-for-divi' ),
+                'description'    => esc_html__( 'Define custom padding for price image', 'divinationkit-for-divi' ),
+                'type'           => 'custom_padding',
+                'tab_slug'       => 'advanced',
+                'toggle_slug'    => 'image',
+                'default'        => '0px|0px|0px|0px',
+                'mobile_options' => true,
             ),
         );
 
         $divider = array(
-            'divider_color'      => array(
+            'divider_color'    => array(
                 'label'          => esc_html__( 'Divider Color', 'divinationkit-for-divi' ),
-                'discription'    => esc_html__( 'Define the divi line color', 'divinationkit-for-divi' ),
+                'description'    => esc_html__( 'Define the divi line color', 'divinationkit-for-divi' ),
                 'type'           => 'color-alpha',
                 'default'        => '#333333',
                 'tab_slug'       => 'advanced',
@@ -270,28 +274,28 @@ class DINA_PriceList extends DINA_Module_Core {
 
             ),
 
-            'divider_style'      => array(
+            'divider_style'    => array(
                 'label'          => esc_html__( 'Divider Style', 'divinationkit-for-divi' ),
                 'description'    => esc_html__( 'Define the divider style', 'divinationkit-for-divi' ),
                 'type'           => 'select',
                 'tab_slug'       => 'advanced',
                 'toggle_slug'    => 'divider',
                 'options'        => array(
-                    'dotted'     => esc_html__( 'Dotted', 'divinationkit-for-divi' ),
-                    'dashed'     => esc_html__( 'Dashed', 'divinationkit-for-divi' ),
-                    'solid'      => esc_html__( 'Solid', 'divinationkit-for-divi' ),
-                    'double'     => esc_html__( 'Double', 'divinationkit-for-divi' ),
-                    'groove'     => esc_html__( 'Groove', 'divinationkit-for-divi' ),
-                    'ridge'      => esc_html__( 'Ridge', 'divinationkit-for-divi' ),
-                    'inset'      => esc_html__( 'Inset', 'divinationkit-for-divi' ),
-                    'outset'     => esc_html__( 'Outset', 'divinationkit-for-divi' ),
-                    'none'       => esc_html__( 'None', 'divinationkit-for-divi' ),
+                    'dotted' => esc_html__( 'Dotted', 'divinationkit-for-divi' ),
+                    'dashed' => esc_html__( 'Dashed', 'divinationkit-for-divi' ),
+                    'solid'  => esc_html__( 'Solid', 'divinationkit-for-divi' ),
+                    'double' => esc_html__( 'Double', 'divinationkit-for-divi' ),
+                    'groove' => esc_html__( 'Groove', 'divinationkit-for-divi' ),
+                    'ridge'  => esc_html__( 'Ridge', 'divinationkit-for-divi' ),
+                    'inset'  => esc_html__( 'Inset', 'divinationkit-for-divi' ),
+                    'outset' => esc_html__( 'Outset', 'divinationkit-for-divi' ),
+                    'none'   => esc_html__( 'None', 'divinationkit-for-divi' ),
                 ),
                 'default'        => 'solid',
                 'mobile_options' => true,
             ),
 
-            'divider_position'   => array(
+            'divider_position' => array(
                 'label'          => esc_html__( 'Divider Vertical Align', 'divinationkit-for-divi' ),
                 'description'    => esc_html__( 'Define the divider positions', 'divinationkit-for-divi' ),
                 'type'           => 'select',
@@ -306,15 +310,15 @@ class DINA_PriceList extends DINA_Module_Core {
                 'mobile_options' => true,
             ),
 
-            'divider_weight'     => array(
+            'divider_weight'   => array(
                 'label'          => esc_html__( 'Divider Weight', 'divinationkit-for-divi' ),
                 'description'    => esc_html__( 'Define space between divider and text/icon', 'divinationkit-for-divi' ),
                 'type'           => 'range',
                 'default_unit'   => 'px',
                 'range_settings' => array(
-                    'min'        => 0,
-                    'step'       => 1,
-                    'max'        => 25,
+                    'min'  => 0,
+                    'step' => 1,
+                    'max'  => 25,
                 ),
                 'default'        => '1px',
                 'tab_slug'       => 'advanced',
@@ -322,15 +326,15 @@ class DINA_PriceList extends DINA_Module_Core {
                 'mobile_options' => true,
             ),
 
-            'divider_gap'        => array(
+            'divider_gap'      => array(
                 'label'          => esc_html__( 'Divider Space', 'divinationkit-for-divi' ),
                 'description'    => esc_html__( 'Define space between divider and text/icon', 'divinationkit-for-divi' ),
                 'type'           => 'range',
                 'default_unit'   => 'px',
                 'range_settings' => array(
-                    'min'        => 0,
-                    'step'       => 1,
-                    'max'        => 250,
+                    'min'  => 0,
+                    'step' => 1,
+                    'max'  => 250,
                 ),
                 'default'        => '15px',
                 'tab_slug'       => 'advanced',
@@ -339,173 +343,202 @@ class DINA_PriceList extends DINA_Module_Core {
             ),
         );
 
-        $custom_spacing = array(
-            'item_margin'        => array(
-                'label'           => esc_html__( 'Item Margin', 'divinationkit-for-divi' ),
-                'descripton'      => esc_html__( 'Define custom margin for price iamge', 'divinationkit-for-divi' ),
-                'type'            => 'custom_margin',
-                'tab_slug'        => 'advanced',
-                'toggle_slug'     => 'item',
-                'default'         => '0px|0px|20px|0px',
-                'mobile_options'  => true,
+        $item_spacing = array(
+            'item_margin'  => array(
+                'label'          => esc_html__( 'Item Margin', 'divinationkit-for-divi' ),
+                'description'    => esc_html__( 'Define custom margin for price image', 'divinationkit-for-divi' ),
+                'type'           => 'custom_margin',
+                'tab_slug'       => 'advanced',
+                'toggle_slug'    => 'item',
+                'default'        => '0px|0px|20px|0px',
+                'mobile_options' => true,
             ),
 
-            'item_padding'       => array(
-                'label'           => esc_html__( 'Item Padding', 'divinationkit-for-divi' ),
-                'descripton'      => esc_html__( 'Define custom padding for price iamge', 'divinationkit-for-divi' ),
-                'type'            => 'custom_padding',
-                'tab_slug'        => 'advanced',
-                'toggle_slug'     => 'item',
-                'default'         => '0px|0px|0px|0px',
-                'mobile_options'  => true,
+            'item_padding' => array(
+                'label'          => esc_html__( 'Item Padding', 'divinationkit-for-divi' ),
+                'description'    => esc_html__( 'Define custom padding for price image', 'divinationkit-for-divi' ),
+                'type'           => 'custom_padding',
+                'tab_slug'       => 'advanced',
+                'toggle_slug'    => 'item',
+                'default'        => '0px|0px|0px|0px',
+                'mobile_options' => true,
             ),
         );
 
-
-        return array_merge( $layout, $icon_design, $image_design, $divider, $custom_spacing );
+        return array_merge( $layout, $icon_design, $image_design, $divider, $item_spacing );
     }
 
-     // Modify existing functionalities and add new functionalities
-     public function get_advanced_fields_config() {
+    // Modify existing functionalities and add new functionalities
+    public function get_advanced_fields_config() {
 
         // Get theme accent color
         $et_accent_color = et_builder_accent_color();
 
-        $advanced_fields                   = array();
-        $advanced_fields[ 'text' ]         = false;
-        $advanced_fields[ 'text_shadow' ]  = array();
-        $advanced_fields[ 'fonts' ]        = array();
+        $advanced_fields                = array();
+        $advanced_fields['text']        = false;
+        $advanced_fields['text_shadow'] = array();
+        $advanced_fields['fonts']       = array();
 
-        // Flip card border
-        $advanced_fields[ 'borders' ][ 'list_item' ] = array(
-			'label_prefix'          => esc_html__( 'Price item', 'divinationkit-for-divi' ),
-            'tab_slug'              => 'advanced',
-            'toggle_slug'           => 'item',
-			'css'                   => array(
-				'main'              => array(
-					'border_radii'  => '%%order_class%% .dina_pricelist-item-wrapper',
-					'border_styles' => '%%order_class%% .dina_pricelist-item-wrapper',
-				),
-				'important'         => false,
-			),
-			'defaults'              => array(
-				'border_radii'      => 'on|0px|0px|0px|0px',
-				'border_styles'     => array(
-					'width'         => '0px',
-					'color'         => '#333333',
-					'style'         => 'solid',
-				),
-			),
-		);
+        // Border main
+        $advanced_fields['borders'] = array(
+            'tab_slug'    => 'advanced',
+            'toggle_slug' => 'border',
+            'default'     => array(
+                'css'      => array(
+                    'main'      => array(
+                        'border_radii'  => '%%order_class%%',
+                        'border_styles' => '%%order_class%%',
+                    ),
+                    'important' => false,
+                ),
+                'defaults' => array(
+                    'border_radii'  => 'on|0px|0px|0px|0px',
+                    'border_styles' => array(
+                        'width' => '0px',
+                        'color' => $et_accent_color,
+                        'style' => 'solid',
+                    ),
+                ),
+            ),
+        );
+
+        // item border
+        $advanced_fields['borders']['list_item'] = array(
+            'label_prefix' => esc_html__( 'Price item', 'divinationkit-for-divi' ),
+            'tab_slug'     => 'advanced',
+            'toggle_slug'  => 'item',
+            'css'          => array(
+                'main'      => array(
+                    'border_radii'  => '%%order_class%% .dina_pricelist_child',
+                    'border_styles' => '%%order_class%% .dina_pricelist_child',
+                ),
+                'important' => false,
+            ),
+            'defaults'     => array(
+                'border_radii'  => 'on|0px|0px|0px|0px',
+                'border_styles' => array(
+                    'width' => '0px',
+                    'color' => '#333333',
+                    'style' => 'solid',
+                ),
+            ),
+        );
 
         // icon border
-        $advanced_fields[ 'borders' ][ 'icon' ] = array(
-            'label_prefix'          => esc_html__( 'Icon', 'divinationkit-for-divi' ),
-            'tab_slug'              => 'advanced',
-            'toggle_slug'           => 'icon',
-            'css'                   => array(
-                'main'              => array(
+        $advanced_fields['borders']['icon'] = array(
+            'label_prefix'    => esc_html__( 'Icon', 'divinationkit-for-divi' ),
+            'tab_slug'        => 'advanced',
+            'toggle_slug'     => 'icon',
+            'css'             => array(
+                'main'      => array(
                     'border_radii'  => '%%order_class%% .dina_pricelist-icon i.dina_icon',
                     'border_styles' => '%%order_class%% .dina_pricelist-icon i.dina_icon',
                 ),
-                'important'         => false,
+                'important' => false,
             ),
-            'depends_show_if'       => array(
-                'media_type'        => 'icon',
+            'depends_show_if' => array(
+                'media_type' => 'icon',
             ),
-            'defaults'              => array(
-                'border_radii'      => 'on|0px|0px|0px|0px',
-                'border_styles'     => array(
-                    'width'         => '0px',
-                    'color'         => $et_accent_color,
-                    'style'         => 'solid',
+            'defaults'        => array(
+                'border_radii'  => 'on|0px|0px|0px|0px',
+                'border_styles' => array(
+                    'width' => '0px',
+                    'color' => $et_accent_color,
+                    'style' => 'solid',
                 ),
             ),
         );
 
         // Image border
-        $advanced_fields[ 'borders' ][ 'image' ] = array(
-            'label_prefix'          => esc_html__( 'Image', 'divinationkit-for-divi' ),
-            'tab_slug'              => 'advanced',
-            'toggle_slug'           => 'image',
-            'css'                   => array(
-                'main'              => array(
+        $advanced_fields['borders']['image'] = array(
+            'label_prefix'    => esc_html__( 'Image', 'divinationkit-for-divi' ),
+            'tab_slug'        => 'advanced',
+            'toggle_slug'     => 'image',
+            'css'             => array(
+                'main'      => array(
                     'border_radii'  => '%%order_class%% .dina_pricelist-image',
                     'border_styles' => '%%order_class%% .dina_pricelist-image',
                 ),
-                'important'         => false,
+                'important' => false,
             ),
-            'depends_show_if'       => array(
-                'media_type'        => 'icon',
+            'depends_show_if' => array(
+                'media_type' => 'icon',
             ),
-            'defaults'              => array(
-                'border_radii'      => 'on|0px|0px|0px|0px',
-                'border_styles'     => array(
-                    'width'         => '0px',
-                    'color'         => $et_accent_color,
-                    'style'         => 'solid',
+            'defaults'        => array(
+                'border_radii'  => 'on|0px|0px|0px|0px',
+                'border_styles' => array(
+                    'width' => '0px',
+                    'color' => $et_accent_color,
+                    'style' => 'solid',
                 ),
             ),
-        );        
+        );
 
-        $advanced_fields[ 'fonts' ][ 'title' ] = array(
-            'label'             => esc_html__( 'Title', 'divinationkit-for-divi' ),
-            'css'               => array(
-                'main'          => '%%order_class%% .dina_pricelist-title',
-                'important'     => false,
+        $advanced_fields['fonts']['title'] = array(
+            'label'       => esc_html__( 'Title', 'divinationkit-for-divi' ),
+            'css'         => array(
+                'main'      => '%%order_class%% .dina_pricelist-title',
+                'important' => false,
             ),
-            'font_size'         => array(
-                'default'       => '18px',
+            'font_size'   => array(
+                'default' => '18px',
             ),
-            'tab_slug'          => 'advanced',
-            'toggle_slug'       => 'content',
-            'sub_toggle'        => 'title',
-            'line_height'       => array(
-                'default'       => '1.5em',
+            'tab_slug'    => 'advanced',
+            'toggle_slug' => 'content',
+            'sub_toggle'  => 'title',
+            'line_height' => array(
+                'default' => '1.5em',
             ),
         );
 
-        $advanced_fields[ 'fonts' ][ 'price' ] = array(
-            'label'             => esc_html__( 'Price', 'divinationkit-for-divi' ),
-            'css'               => array(
-                'main'          => '%%order_class%% .dina_pricelist-price',
-                'important'     => false,
+        $advanced_fields['fonts']['price'] = array(
+            'label'       => esc_html__( 'Price', 'divinationkit-for-divi' ),
+            'css'         => array(
+                'main'      => '%%order_class%% .dina_pricelist-price',
+                'important' => false,
             ),
-            'font_size'         => array(
-                'default'       => '18px',
+            'font_size'   => array(
+                'default' => '18px',
             ),
-            'tab_slug'          => 'advanced',
-            'toggle_slug'       => 'content',
-            'sub_toggle'        => 'price',
-            'line_height'       => array(
-                'default'       => '1.3em',
+            'tab_slug'    => 'advanced',
+            'toggle_slug' => 'content',
+            'sub_toggle'  => 'price',
+            'line_height' => array(
+                'default' => '1.3em',
             ),
         );
 
-        $advanced_fields[ 'fonts' ][ 'description' ] = array(
-            'label'             => esc_html__( 'Description', 'divinationkit-for-divi' ),
-            'css'               => array(
-                'main'          => '%%order_class%% .dina_pricelist-description p',
-                'important'     => false,
+        $advanced_fields['fonts']['description'] = array(
+            'label'       => esc_html__( 'Description', 'divinationkit-for-divi' ),
+            'css'         => array(
+                'main'      => '%%order_class%% .dina_pricelist-description p',
+                'important' => false,
             ),
-            'tab_slug'          => 'advanced',
-            'toggle_slug'       => 'content',
-            'sub_toggle'        => 'description',
-            'font_size'         => array(
-                'default'       => '14px',
+            'tab_slug'    => 'advanced',
+            'toggle_slug' => 'content',
+            'sub_toggle'  => 'description',
+            'font_size'   => array(
+                'default' => '14px',
             ),
-            'line_height'       => array(
-                'default'       => '1.2em',
+            'line_height' => array(
+                'default' => '1.2em',
+            ),
+        );
+
+        $advanced_fields['box_shadow'] = array(
+            'default' => array(
+                'css' => array(
+                    'main' => '%%order_class%% .dina_pricelist_child',
+                ),
             ),
         );
 
         return $advanced_fields;
     }
 
-    public function render($attrs, $content, $render_slug)
-    {
+    public function render( $attrs, $content, $render_slug ) {
 
-        $this->render_css($render_slug);      
+        $this->render_css( $render_slug );
 
         return sprintf(
             '<div class="dina_pricelist-container">
@@ -514,117 +547,132 @@ class DINA_PriceList extends DINA_Module_Core {
                 </div>
             </div>',
             $this->content,
-            $this->props[ 'layout' ]
+            $this->props['layout']
         );
     }
 
-    public function render_css($render_slug) {
+    public function render_css( $render_slug ) {
 
-        $this->dina_responsive_css($render_slug, array(
-            [
-                'option_slug'       => 'layout',
-                'property'          => 'display',
-                'selector'          => '%%order_class%% .dina_pricelist-item-wrapper'
-            ],
-            [
-                'option_slug'       => 'content_position',
-                'property'          => 'align-items',
-                'selector'          => '%%order_class%% .dina_pricelist-item-wrapper'
-            ],
-            [
-                'option_slug'       => 'content_gap',
-                'property'          => 'gap',
-                'selector'          => '%%order_class%% .dina_pricelist-item-wrapper'
-            ],
-            [
-                'option_slug'       => 'icon_size',
-                'property'          => 'font-size',
-                'selector'          => '%%order_class%% .dina_pricelist-icon i.dina_icon',
-                'hover'             => '%%order_class%% .dina_pricelist_child:hover .dina_pricelist-icon i.dina_icon'
-            ],
-            [
-                'option_slug'       => 'icon_color',
-                'property'          => 'color',
-                'selector'          => '%%order_class%% .dina_pricelist-icon i.dina_icon',
-                'hover'             => '%%order_class%% .dina_pricelist_child:hover .dina_pricelist-icon i.dina_icon'
-            ],
-            [
-                'option_slug'       => 'icon_bg',
-                'property'          => 'background',
-                'selector'          => '%%order_class%% .dina_pricelist-icon i.dina_icon',
-                'hover'             => '%%order_class%% .dina_pricelist_child:hover .dina_pricelist-icon i.dina_icon'
-            ],
-            [
-                'option_slug'       => 'icon_padding',
-                'property'          => 'padding',
-                'selector'          => '%%order_class%% .dina_pricelist-icon i.dina_icon'
-            ],
-            [
-                'option_slug'       => 'icon_margin',
-                'property'          => 'margin',
-                'selector'          => '%%order_class%% .dina_pricelist-icon'
-            ],
-            [
-                'option_slug'       => 'image_width',
-                'property'          => 'width',
-                'selector'          => '%%order_class%% .dina_pricelist-image-wrapper'
-            ],
-            [
-                'option_slug'       => 'image_margin',
-                'property'          => 'margin',
-                'selector'          => '%%order_class%% .dina_pricelist-image'
-            ],
-            [
-                'option_slug'       => 'image_padding',
-                'property'          => 'padding',
-                'selector'          => '%%order_class%% .dina_pricelist-image'
-            ],
-            [
-                'option_slug'       => 'image_align',
-                'property'          => 'justify-content',
-                'selector'          => '%%order_class%% .dina_pricelist-image-wrapper'
-            ],
-            [
-                'option_slug'       => 'divider_color',
-                'property'          => 'border-color',
-                'selector'          => '%%order_class%% .dina_pricelist-divider',
-                'hover'             => '%%order_class%% .dina_pricelist_child:hover .dina_pricelist-divider',
-            ],
-            [
-                'option_slug'       => 'divider_style',
-                'property'          => 'border-style',
-                'selector'          => '%%order_class%% .dina_pricelist-divider'
-            ],
-            [
-                'option_slug'       => 'divider_weight',
-                'property'          => 'border-bottom-width',
-                'selector'          => '%%order_class%% .dina_pricelist-divider'
-            ],
-            [
-                'option_slug'       => 'divider_gap',
-                'property'          => 'gap',
-                'selector'          => '%%order_class%% .dina_pricelist-heading'
-            ],
-            [
-                'option_slug'       => 'divider_position',
-                'property'          => 'align-items',
-                'selector'          => '%%order_class%% .dina_pricelist-heading'
-            ],
-            [
-                'option_slug'       => 'item_margin',
-                'property'          => 'margin',
-                'selector'          => '%%order_class%% .dina_pricelist_item',
-                'important'         => true,
-            ],
-            [
-                'option_slug'       => 'item_padding',
-                'property'          => 'padding',
-                'selector'          => '%%order_class%% .dina_pricelist_item',
-                'important'         => true,
-            ],
-        ));
+        $this->dina_responsive_css( $render_slug, array(
+            array(
+                'option_slug' => 'layout',
+                'property'    => 'display',
+                'selector'    => '%%order_class%% .dina_pricelist-item-wrapper',
+            ),
+            array(
+                'option_slug' => 'content_position',
+                'property'    => 'align-items',
+                'selector'    => '%%order_class%% .dina_pricelist-item-wrapper',
+            ),
+            array(
+                'option_slug' => 'content_gap',
+                'property'    => 'gap',
+                'selector'    => '%%order_class%% .dina_pricelist-item-wrapper',
+            ),
+            array(
+                'option_slug' => 'icon_size',
+                'property'    => 'font-size',
+                'selector'    => '%%order_class%% .dina_pricelist-icon i.dina_icon',
+                'hover'       => '%%order_class%% .dina_pricelist_child:hover .dina_pricelist-icon i.dina_icon',
+            ),
+            array(
+                'option_slug' => 'icon_color',
+                'property'    => 'color',
+                'selector'    => '%%order_class%% .dina_pricelist-icon i.dina_icon',
+                'hover'       => '%%order_class%% .dina_pricelist_child:hover .dina_pricelist-icon i.dina_icon',
+            ),
+            array(
+                'option_slug' => 'icon_bg',
+                'property'    => 'background',
+                'selector'    => '%%order_class%% .dina_pricelist-icon i.dina_icon',
+                'hover'       => '%%order_class%% .dina_pricelist_child:hover .dina_pricelist-icon i.dina_icon',
+            ),
+            array(
+                'option_slug' => 'icon_padding',
+                'property'    => 'padding',
+                'selector'    => '%%order_class%% .dina_pricelist-icon i.dina_icon',
+            ),
+            array(
+                'option_slug' => 'icon_margin',
+                'property'    => 'margin',
+                'selector'    => '%%order_class%% .dina_pricelist-icon',
+            ),
 
-        
+            array(
+                'option_slug' => 'image_margin',
+                'property'    => 'margin',
+                'selector'    => '%%order_class%% .dina_pricelist-image',
+            ),
+            array(
+                'option_slug' => 'image_padding',
+                'property'    => 'padding',
+                'selector'    => '%%order_class%% .dina_pricelist-image',
+            ),
+            array(
+                'option_slug' => 'image_align',
+                'property'    => 'justify-content',
+                'selector'    => '%%order_class%% .dina_pricelist-image-wrapper',
+            ),
+            array(
+                'option_slug' => 'divider_color',
+                'property'    => 'border-color',
+                'selector'    => '%%order_class%% .dina_pricelist-divider',
+                'hover'       => '%%order_class%% .dina_pricelist_child:hover .dina_pricelist-divider',
+            ),
+            array(
+                'option_slug' => 'divider_style',
+                'property'    => 'border-style',
+                'selector'    => '%%order_class%% .dina_pricelist-divider',
+            ),
+            array(
+                'option_slug' => 'divider_weight',
+                'property'    => 'border-bottom-width',
+                'selector'    => '%%order_class%% .dina_pricelist-divider',
+            ),
+            array(
+                'option_slug' => 'divider_gap',
+                'property'    => 'gap',
+                'selector'    => '%%order_class%% .dina_pricelist-heading',
+            ),
+            array(
+                'option_slug' => 'divider_position',
+                'property'    => 'align-items',
+                'selector'    => '%%order_class%% .dina_pricelist-heading',
+            ),
+            array(
+                'option_slug' => 'item_margin',
+                'property'    => 'margin',
+                'selector'    => '%%order_class%% .dina_pricelist_child',
+                'important'   => true,
+            ),
+            array(
+                'option_slug' => 'item_padding',
+                'property'    => 'padding',
+                'selector'    => '%%order_class%% .dina_pricelist_child',
+                'important'   => true,
+            ),
+        ) );
+
+        $layout = $this->props['layout'];
+
+        if ( $layout === 'flex' ) {
+            $this->dina_responsive_css( $render_slug, array(
+                array(
+                    'option_slug' => 'image_width',
+                    'property'    => 'width',
+                    'selector'    => '%%order_class%% .dina_pricelist-image-wrapper',
+                ),
+            ) );
+        } else {
+            $this->dina_responsive_css( $render_slug, array(
+                array(
+                    'option_slug' => 'image_width',
+                    'property'    => 'width',
+                    'selector'    => '%%order_class%% .dina_pricelist-image',
+                ),
+            ) );
+        }
+
     }
 
 }

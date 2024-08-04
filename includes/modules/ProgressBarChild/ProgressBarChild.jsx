@@ -195,9 +195,10 @@ export class ProgressBarChild extends Component {
 
     renderName() {
         const hideName = this.props.hide_name ? this.props.hide_name : 'off';
+        const namePlacement = this.props.name_placement;
         if (hideName === 'off') {
             return (
-                <span className="dina_progress_bar-name">
+                <span className={`dina_progress_bar-name ${namePlacement}`}>
                     {this.props.name}
                 </span>
             );

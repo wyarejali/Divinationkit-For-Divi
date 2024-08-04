@@ -8,7 +8,7 @@ class DINA_Progress_Bar_Child extends DINA_Module_Core {
         $this->vb_support               = 'on';
         $this->type                     = 'child';
         $this->main_css_element         = "%%order_class%%";
-        $this->child_title_var          = 'name';
+        $this->child_title_var          = 'admin_title';
         $this->child_title_fallback_var = 'name';
 
         $this->settings_modal_toggles = array(
@@ -422,8 +422,10 @@ class DINA_Progress_Bar_Child extends DINA_Module_Core {
 
     public function render_name() {
 
+        $name_placement = $this->props['name_placement'];
+
         if ( $this->props['hide_name'] !== 'on' ) {
-            return sprintf( '<span class="dina_progress_bar-name">%1$s</span>', $this->props['name'] );
+            return sprintf( '<span class="dina_progress_bar-name %2$s">%1$s</span>', $this->props['name'], $name_placement );
         }
     }
 

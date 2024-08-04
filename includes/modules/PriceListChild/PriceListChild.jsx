@@ -1,27 +1,156 @@
 import React, { Component } from 'react';
-import { renderIconStyle } from '../Core/DiviNationKit-core';
+import {
+    renderIcon,
+    renderIconStyle,
+    setResponsiveCSS,
+} from '../Core/DiviNationKit-core';
 
 class PriceListChild extends Component {
     static slug = 'dina_pricelist_child';
 
     static css(props) {
         const additionalCss = [];
+        let layout = props.layout,
+            imageDesign;
+
         const iconStyle = renderIconStyle(
             props,
             'icon',
-            '%%order_class%% .dina_pricelist-icon i.dina_icon'
+            '.dina_pricelist-container %%order_class%% .dina_pricelist-icon i.dina_icon'
         );
 
-        return additionalCss.concat(iconStyle);
+        const responsiveCss = setResponsiveCSS(props, [
+            {
+                selector:
+                    '.dina_pricelist-container %%order_class%% .dina_pricelist-item-wrapper',
+                optionName: 'layout',
+                property: 'display',
+            },
+            {
+                selector:
+                    '.dina_pricelist-container %%order_class%% .dina_pricelist-item-wrapper',
+                optionName: 'content_position',
+                property: 'align-items',
+            },
+            {
+                selector:
+                    '.dina_pricelist-container %%order_class%% .dina_pricelist-item-wrapper',
+                optionName: 'content_gap',
+                property: 'gap',
+            },
+
+            {
+                selector:
+                    '.dina_pricelist-container %%order_class%% .dina_pricelist-icon i.dina_icon',
+                optionName: 'icon_color',
+                property: 'color',
+            },
+            {
+                selector:
+                    '.dina_pricelist-container %%order_class%% .dina_pricelist-icon i.dina_icon',
+                optionName: 'icon_bg',
+                property: 'background',
+            },
+            {
+                selector:
+                    '.dina_pricelist-container %%order_class%% .dina_pricelist-icon i.dina_icon',
+                optionName: 'icon_size',
+                property: 'font-size',
+            },
+            {
+                selector:
+                    '.dina_pricelist-container %%order_class%% .dina_pricelist-icon i.dina_icon',
+                optionName: 'icon_padding',
+                property: 'padding',
+            },
+            {
+                selector:
+                    '.dina_pricelist-container %%order_class%% .dina_pricelist-icon',
+                optionName: 'icon_margin',
+                property: 'margin',
+            },
+
+            {
+                selector:
+                    '.dina_pricelist-container %%order_class%% .dina_pricelist-image',
+                optionName: 'image_margin',
+                property: 'margin',
+            },
+            {
+                selector:
+                    '.dina_pricelist-container %%order_class%% .dina_pricelist-image',
+                optionName: 'image_padding',
+                property: 'padding',
+            },
+            {
+                selector:
+                    '.dina_pricelist-container %%order_class%% .dina_pricelist-image-wrapper',
+                optionName: 'image_align',
+                property: 'justify-content',
+            },
+
+            {
+                selector:
+                    '.dina_pricelist-container %%order_class%% .dina_pricelist-divider',
+                optionName: 'divider_color',
+                property: 'border-color',
+            },
+            {
+                selector:
+                    '.dina_pricelist-container %%order_class%% .dina_pricelist-divider',
+                optionName: 'divider_style',
+                property: 'border-style',
+            },
+            {
+                selector:
+                    '.dina_pricelist-container %%order_class%% .dina_pricelist-divider',
+                optionName: 'divider_weight',
+                property: 'border-bottom-width',
+            },
+            {
+                selector:
+                    '.dina_pricelist-container %%order_class%% .dina_pricelist-heading',
+                optionName: 'divider_gap',
+                property: 'gap',
+            },
+            {
+                selector:
+                    '.dina_pricelist-container %%order_class%% .dina_pricelist-heading',
+                optionName: 'divider_position',
+                property: 'align-items',
+            },
+        ]);
+
+        if (layout === 'flex') {
+            imageDesign = setResponsiveCSS(props, [
+                {
+                    selector:
+                        '.dina_pricelist-container %%order_class%% .dina_pricelist-image-wrapper',
+                    optionName: 'image_width',
+                    property: 'width',
+                },
+            ]);
+        } else {
+            imageDesign = setResponsiveCSS(props, [
+                {
+                    selector:
+                        '.dina_pricelist-container %%order_class%% .dina_pricelist-image',
+                    optionName: 'image_width',
+                    property: 'width',
+                },
+            ]);
+        }
+
+        return additionalCss
+            .concat(iconStyle)
+            .concat(responsiveCss)
+            .concat(imageDesign);
     }
 
     renderIcon = () => {
-        const utils = window.ET_Builder.API.Utils;
-        const Icon = utils.processFontIcon(this.props.icon);
-
         return (
             <div className="dina_pricelist-icon">
-                <i className="dina_icon">{Icon}</i>
+                <i className="dina_icon">{renderIcon(this.props.icon)}</i>
             </div>
         );
     };

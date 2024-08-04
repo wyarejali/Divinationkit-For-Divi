@@ -8,6 +8,8 @@ class PriceList extends Component {
 
     static css(props) {
         const additionalCss = [];
+        let layout = props.layout,
+            imageDesign;
 
         const responsiveCss = setResponsiveCSS(props, [
             {
@@ -53,11 +55,6 @@ class PriceList extends Component {
             },
 
             {
-                selector: '%%order_class%% .dina_pricelist-image-wrapper',
-                optionName: 'image_width',
-                property: 'width',
-            },
-            {
                 selector: '%%order_class%% .dina_pricelist-image',
                 optionName: 'image_margin',
                 property: 'margin',
@@ -100,20 +97,38 @@ class PriceList extends Component {
             },
 
             {
-                selector: '%%order_class%% .dina_pricelist_item',
+                selector: '%%order_class%% .dina_pricelist_child',
                 optionName: 'item_margin',
                 property: 'margin',
                 important: true,
             },
             {
-                selector: '%%order_class%% .dina_pricelist_item',
+                selector: '%%order_class%% .dina_pricelist_child',
                 optionName: 'item_padding',
                 property: 'padding',
                 important: true,
             },
         ]);
 
-        return additionalCss.concat(responsiveCss);
+        if (layout === 'flex') {
+            imageDesign = setResponsiveCSS(props, [
+                {
+                    selector: '%%order_class%% .dina_pricelist-image-wrapper',
+                    optionName: 'image_width',
+                    property: 'width',
+                },
+            ]);
+        } else {
+            imageDesign = setResponsiveCSS(props, [
+                {
+                    selector: '%%order_class%% .dina_pricelist-image',
+                    optionName: 'image_width',
+                    property: 'width',
+                },
+            ]);
+        }
+
+        return additionalCss.concat(responsiveCss).concat(imageDesign);
     }
 
     render() {

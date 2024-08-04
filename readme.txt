@@ -118,12 +118,14 @@ Added New Modules, features and fixed issues
 - Added: Business Hour
 - Added: Gradient Heading
 - Fixed: Update Dual Button module to customize in a organized way + auto 2 line
-- Fixed: Price list update
-- Fixed: flip card box shadow
-- Fixed: Logo slider RTL mode not working in live 
+- Fixed: Price list image alignment issue. Items margin, padding, border
 - Feature: Text area added for Rating module.
 - Feature: Tooltip on icon list module and fixed border issue.
 - Feature: Added badge on icon box module.
+
+- Fixed: flip card box shadow
+- Fixed: Logo slider RTL mode not working in live 
+
 - Added: Testimonial Slider
 - Added: FAQ - Accordion
 

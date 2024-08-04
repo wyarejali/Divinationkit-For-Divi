@@ -36,7 +36,7 @@ body *[class^='dina'] {
 .dina_image_magnifier-lens,
 .dina_pricelist-item-wrapper,
 .dina_pricelist-image,
-.dina_pricelist_item,
+.dina_pricelist_child,
 .dian_slider_icon,
 .dina_icon_list_item {
     border-style: solid;
